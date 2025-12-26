@@ -1,0 +1,14 @@
+gemini:
+  model_name: "gemini-2.0-flash" 
+  api_key_env: "GOOGLE_API_KEY" # Reference to environment variable
+
+data:
+  pdf_path: "data/raw/apple_10k.pdf" # Path to your Apple 10-K
+
+chunking:
+  chunk_size: 6000
+  chunk_overlap: 800
+
+embedding:
+  collection_name: "apple_10k_agentic_v1"
+  chroma_path: "data/chroma_db"

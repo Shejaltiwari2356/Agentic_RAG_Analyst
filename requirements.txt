@@ -1,0 +1,22 @@
+# --- Original Precision RAG Dependencies ---
+ollama>=0.1.0
+pypdf>=3.0.0
+pandas>=2.0.0
+numpy>=1.24.0
+chromadb>=0.4.0
+langchain>=0.1.0
+langchain-community>=0.0.0
+sentence-transformers>=2.2.0
+fastapi>=0.104.0
+uvicorn>=0.24.0
+pydantic>=2.0.0
+pyyaml>=6.0
+tiktoken>=0.5.0
+beautifulsoup4>=4.12.0
+
+# --- New Agentic RAG Dependencies ---
+google-genai       # Latest Gemini 2.0 SDK
+llama-parse        # High-fidelity PDF parsing
+llama-index        # Required for MarkdownNodeParser
+python-dotenv      # For secure .env key loading
+nest-asyncio       # To handle async LlamaParse calls in scripts
