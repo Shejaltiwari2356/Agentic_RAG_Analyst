@@ -13,7 +13,7 @@ class RetrievalTool:
         print(f"🔍 [Tool: Retriever] Performing precision search for: {query}")
         
         # Reduced to 20 to ensure Gemini stays focused on the most relevant data
-        results = self.db.query(query_text=query, n_results=40)
+        results = self.db.query(query_text=query, n_results=10)
         
         formatted = []
         for i, r in enumerate(results):
