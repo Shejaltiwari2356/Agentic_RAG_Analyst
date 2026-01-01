@@ -5,44 +5,34 @@ from src.core.database import DatabaseManager
 class RetrievalTool:
     def __init__(self, config_path: str = "config/config.yaml"):
         self.db = DatabaseManager(config_path)
-        # Load cross-encoder reranker (downloads on first use ~80MB)
+        # Initialize reranker
         self.reranker = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
-        print("✅ Reranker model loaded")
+        print("✓ CrossEncoder reranker loaded")
 
     def search_10k(self, query: str) -> str:
         """
-        Two-stage retrieval:
-        1. Retrieve 30 candidates via vector search
-        2. Rerank with cross-encoder, return top 10
+        Two-stage retrieval: vector search → reranking for precision.
         """
-        print(f"🔍 [Stage 1] Retrieving candidates for: {query}")
-        
-        # Stage 1: Get more candidates (30-50)
-        candidates = self.db.query(query_text=query, n_results=30)
-        
-        if not candidates:
-            return "No relevant data found."
-        
-        # Stage 2: Rerank with cross-encoder
-        print(f"🎯 [Stage 2] Reranking {len(candidates)} candidates...")
-        
-        pairs = [[query, c['text']] for c in candidates]
+        print(f"🔍 [Tool: Retriever] Performing precision search for: {query}")
+
+        # Stage 1: Retrieve MORE candidates (50 instead of 10)
+        initial_results = self.db.query(query_text=query, n_results=50)
+        print(f"   Retrieved {len(initial_results)} candidates for reranking")
+
+        # Stage 2: Rerank with CrossEncoder
+        pairs = [(query, r['text']) for r in initial_results]
         scores = self.reranker.predict(pairs)
         
-        # Sort by reranker score (higher = more relevant)
-        ranked = sorted(
-            zip(candidates, scores), 
-            key=lambda x: x[1], 
-            reverse=True
-        )
+        # Attach scores and sort
+        for i, r in enumerate(initial_results):
+            r['rerank_score'] = scores[i]
         
-        # Take top 10 after reranking
-        top_results = [r for r, score in ranked[:10]]
+        reranked = sorted(initial_results, key=lambda x: x['rerank_score'], reverse=True)
+        top_results = reranked[:7]  # Keep top 7 after reranking
         
-        # Log reranking effect
-        print(f"📊 Top reranked score: {ranked[0][1]:.3f}, Bottom: {ranked[-1][1]:.3f}")
+        print(f"   Reranked → top score: {top_results[0]['rerank_score']:.3f}")
 
-        # Format results
+        # Format output
         formatted = []
         for i, r in enumerate(top_results):
             meta = r.get('metadata', {})
@@ -50,7 +40,7 @@ class RetrievalTool:
             section = meta.get('section_type', 'General')
 
             node_str = (
-                f"<DATA_CHUNK ID='{i}' RELEVANCE='HIGH'>\n"
+                f"<DATA_CHUNK ID='{i}' RELEVANCE='{r['rerank_score']:.3f}'>\n"
                 f"SOURCE: Page {page}, Section: {section}\n"
                 f"CONTENT: {r['text'].strip()}\n"
                 f"</DATA_CHUNK>"
