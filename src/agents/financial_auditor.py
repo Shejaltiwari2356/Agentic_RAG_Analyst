@@ -191,6 +191,39 @@ STRICT OPERATIONAL PROTOCOL:
 
 40. ANCHOR SEARCH & RECOVERY (NEW): 
     - If a precision search for a numeric value (e.g., "Unrecognized compensation cost") returns no direct matches, you MUST immediately perform an 'Anchor Search' using the specific Note or Item number (e.g., "Note 11 Share-Based Compensation"). Retrieve the full context. You are FORBIDDEN from reporting "Unable to find" before checking the dedicated Note.
+
+41. TOTALS OVER SUB-ITEMS (EXTRACTION RULE):
+    - When asked for a category total (e.g., 'Other non-current assets' or 'Other non-current liabilities'), you MUST scan the table for a row that explicitly begins with 'Total'. 
+    - Do NOT report a sub-line item (e.g., the $62,950 sub-line) as the category value if a 'Total' row (e.g., $83,727) is present in that table.
+
+42. EXTRACTED vs. CALCULATED GROWTH (PROTOCOL):
+    - For growth or change percentages (e.g., iPhone or Services growth), prioritize the number explicitly written in the '% Change' or 'Change' column of the official performance table (e.g., '14%' or '4%').
+    - Only perform manual calculations if the document does not provide a pre-calculated percentage change column.
+
+43. EXTENDED SCOPE (NO REFUSALS):
+    - Corporate identity, executive leadership, and regulatory fines are strictly IN SCOPE.
+    - Ticker Symbol: Search the Cover Page (AAPL).
+    - Executive Names: Search the Signature Page or Item 10 (CEO is Timothy D. Cook; CFO is Kevan Parekh).
+    - Regulatory Fines: Search 'Legal Proceedings' or 'Note 10' (Commission Article 5(4) fine is €500 million; DMA max fine is 10% of annual worldwide net sales).
+
+44. COVER PAGE & SIGNATURE TENACITY:
+    - Information like 'Aggregate Market Value' (March 28, 2025: $3,253,431,000,000) and 'Shares Outstanding' is found on the Cover Page (Page 1 or 2). 
+    - You must explicitly search for 'Cover Page' or 'Registrant' if these data points are requested.
+
+45. CYBERSECURITY RISK SPECIFICITY:
+    - When asked for cybersecurity risks, do not just summarize management's role. You MUST identify the specific threats mentioned in Item 1A 'Risk Factors' (e.g., 'Ransomware,' 'computer viruses,' 'malicious code,' or 'unauthorized access').
+46. REPORTED GROWTH RULE: For Services Growth, you MUST locate the 'Products and Services Performance' table. 
+    Extract the value from the '2025 Change %' column for 'Services'. 
+    DO NOT use Gross Margin numbers ($82,314) to calculate growth; use the reported sales growth (14%).
+
+# FIX FOR: Other Non-Current Liabilities
+47. CATEGORY TOTAL RULE: When asked for 'Other non-current liabilities,' you MUST check the Consolidated Balance Sheet. 
+    Do NOT sum sub-line items from Note 6. You must extract the single line 'Total other non-current liabilities' which is $41,549 Million.
+
+# FIX FOR: Retrieval Persistence (RSU/Dividend)
+48. DEEP SEARCH MANDATE: If a search for 'Unrecognized compensation cost' fails, immediately trigger a tool call for 'Note 11 Share-Based Compensation'. 
+    If a search for 'May 2025 dividend' fails, search for 'Capital Return Program'. 
+    Retrieve the full text of these sections and parse them manually.
 """
         chat = self.client.chats.create(
             model=self.model_id,

@@ -127,7 +127,25 @@ class EvaluationDiagnoser:
 # ==========================================
 def get_100_questions():
     # Returning the subset you are currently testing
-    return [# GROUP 1: Revenue & Financial Performance
+    return [
+        # {"input": "What was the total value of 'Other non-current assets' in 2025?", "expected_output": "$83,727 Million "},
+        # {"input": "What was the year-over-year growth percentage for Services in 2025?", "expected_output": "14% "},
+        # {"input": "How much did iPhone sales grow compared to 2024?", "expected_output": "4% "},
+        # {"input": "Mention specific cybersecurity threats identified as risks in the 10-K.", "expected_output": "Ransomware, computer viruses, or unauthorized access "},
+        # {"input": "What is the trading symbol for Apple common stock?", "expected_output": "AAPL "},
+        # {"input": "Who is the Chief Financial Officer (CFO) of Apple?", "expected_output": "Kevan Parekh "},
+        # {"input": "Identify the Chief Executive Officer of the Company.", "expected_output": "Timothy D. Cook "},
+        # {"input": "What is the potential maximum fine for a violation of the Digital Markets Act (DMA)?", "expected_output": "Up to 10% of annual worldwide net sales "},
+        # {"input": "State the total 'Accounts receivable, net' for 2025.", "expected_output": "$39,777 Million "},
+        # {"input": "What was the total liabilities reported for 2025?", "expected_output": "$285,508 Million "},
+        # {"input": "Identify the 'Other non-current liabilities' balance for 2025.", "expected_output": "$41,549 Million "},
+        # {"input": "Identify the specific fine amount for the Commission Article 5(4) investigation.", "expected_output": "€500 million "},
+        # {"input": "What was the quarterly cash dividend per share declared in May 2025?", "expected_output": "$0.26 per share "},
+        # {"input": "Identify the total 'Unrecognized compensation cost' related to RSUs as of September 2025.", "expected_output": "$21.8 Billion "},
+        # {"input": "What was the aggregate market value of stock held by non-affiliates as of March 28, 2025?", "expected_output": "$3,253,431,000,000 "}
+
+    
+        # # GROUP 1: Revenue & Financial Performance
         # {"input": "What was Apple's total net sales for the fiscal year ended September 27, 2025?", "expected_output": "$416,161 Million [cite: 657, 793]"},
         # {"input": "Identify the total net income for 2025.", "expected_output": "$112,010 Million [cite: 793, 890]"},
         # {"input": "What was the percentage increase in total net sales from 2024 to 2025?", "expected_output": "6% [cite: 657, 672]"},
@@ -139,19 +157,19 @@ def get_100_questions():
         # {"input": "State the income before provision for income taxes in 2025.", "expected_output": "$132,729 Million [cite: 793]"},
         # {"input": "What was the total provision for income taxes in 2025?", "expected_output": "$20,719 Million [cite: 793, 967]"},
 
-        # # GROUP 2: Products & Services
+        # # # GROUP 2: Products & Services
         # {"input": "What were the net sales for iPhone in 2025?", "expected_output": "$209,586 Million [cite: 672, 793]"},
         # {"input": "How much revenue did Services generate in 2025?", "expected_output": "$109,158 Million [cite: 672, 793]"},
         # {"input": "What was the net sales figure for Mac in 2025?", "expected_output": "$33,708 Million [cite: 672, 793]"},
         # {"input": "Identify the net sales for iPad in 2025.", "expected_output": "$28,023 Million [cite: 672, 793]"},
         # {"input": "What was the revenue for 'Wearables, Home and Accessories' in 2025?", "expected_output": "$35,686 Million [cite: 672, 793]"},
         # {"input": "Which product category saw a 4% decrease in sales in 2025?", "expected_output": "Wearables, Home and Accessories [cite: 672, 681]"},
-        # hallucinated {"input": "What was the year-over-year growth percentage for Services in 2025?", "expected_output": "14% [cite: 672]"},
+        # {"input": "What was the year-over-year growth percentage for Services in 2025?", "expected_output": "14% [cite: 672]"},
         # {"input": "How much did iPhone sales grow compared to 2024?", "expected_output": "4% [cite: 672]"},
         # {"input": "What was the net sales growth for Mac in 2025?", "expected_output": "12% [cite: 672]"},
         # {"input": "Did iPad net sales increase or decrease in 2025, and by how much?", "expected_output": "Increased by 5% [cite: 672]"},
 
-        # # GROUP 3: Regional Segments
+        # # # GROUP 3: Regional Segments
         # {"input": "What were the net sales for the Americas segment in 2025?", "expected_output": "$178,353 Million [cite: 657, 1081]"},
         # {"input": "How much revenue was generated in Europe in 2025?", "expected_output": "$111,032 Million [cite: 657, 1081]"},
         # {"input": "What were the net sales in Greater China in 2025?", "expected_output": "$64,377 Million [cite: 657, 1081]"},
@@ -163,19 +181,19 @@ def get_100_questions():
         # {"input": "How much was the operating income for Japan in 2025?", "expected_output": "$13,955 Million [cite: 1081]"},
         # {"input": "What was the operating income for 'Rest of Asia Pacific' in 2025?", "expected_output": "$14,586 Million [cite: 1081]"},
 
-        # # GROUP 4: Operating Expenses((later) )
-        {"input": "What was the total Research and Development (R&D) expense in 2025?", "expected_output": "$34,550 Million [cite: 698, 793]"},
-        {"input": "How much did Apple spend on Selling, General and Administrative (SG&A) in 2025?", "expected_output": "$27,601 Million [cite: 698, 793]"},
-        {"input": "What were the total operating expenses in 2025?", "expected_output": "$62,151 Million [cite: 698, 793]"},
-        {"input": "What drove the increase in R&D expenses in 2025?", "expected_output": "Increases in headcount-related expenses and infrastructure-related costs [cite: 700]"},
-        {"input": "What drove the increase in SG&A expenses in 2025?", "expected_output": "Increases in headcount-related expenses and variable selling expenses [cite: 702]"},
-        {"input": "What was the R&D expense in 2024?", "expected_output": "$31,370 Million [cite: 698, 793]"},
-        {"input": "What was the SG&A expense in 2024?", "expected_output": "$26,097 Million [cite: 698, 793]"},
-        {"input": "Identify the 'Other income/(expense), net' for 2025.", "expected_output": "-$321 Million [cite: 793]"},
-        {"input": "What was the effective tax rate reported for 2025?", "expected_output": "15.6% [cite: 706, 971]"},
-        {"input": "What was the effective tax rate in 2024?", "expected_output": "24.1% [cite: 706, 971]"},
+        # # # GROUP 4: Operating Expenses((later) )
+        # {"input": "What was the total Research and Development (R&D) expense in 2025?", "expected_output": "$34,550 Million [cite: 698, 793]"},
+        # {"input": "How much did Apple spend on Selling, General and Administrative (SG&A) in 2025?", "expected_output": "$27,601 Million [cite: 698, 793]"},
+        # {"input": "What were the total operating expenses in 2025?", "expected_output": "$62,151 Million [cite: 698, 793]"},
+        # {"input": "What drove the increase in R&D expenses in 2025?", "expected_output": "Increases in headcount-related expenses and infrastructure-related costs [cite: 700]"},
+        # {"input": "What drove the increase in SG&A expenses in 2025?", "expected_output": "Increases in headcount-related expenses and variable selling expenses [cite: 702]"},
+        # {"input": "What was the R&D expense in 2024?", "expected_output": "$31,370 Million [cite: 698, 793]"},
+        # {"input": "What was the SG&A expense in 2024?", "expected_output": "$26,097 Million [cite: 698, 793]"},
+        # {"input": "Identify the 'Other income/(expense), net' for 2025.", "expected_output": "-$321 Million [cite: 793]"},
+        # {"input": "What was the effective tax rate reported for 2025?", "expected_output": "15.6% [cite: 706, 971]"},
+        # {"input": "What was the effective tax rate in 2024?", "expected_output": "24.1% [cite: 706, 971]"},
 
-        # # GROUP 5: Balance Sheet - Assets
+        # # # GROUP 5: Balance Sheet - Assets
         # {"input": "What was the total assets as of September 27, 2025?", "expected_output": "$359,241 Million [cite: 804]"},
         # {"input": "Identify the total cash and cash equivalents for 2025.", "expected_output": "$35,934 Million [cite: 804, 815]"},
         # {"input": "What was the value of current marketable securities in 2025?", "expected_output": "$18,763 Million [cite: 804, 896]"},
@@ -187,7 +205,7 @@ def get_100_questions():
         # {"input": "Identify the 'Property, plant and equipment, net' in 2025.", "expected_output": "$49,834 Million [cite: 804, 947]"},
         # {"input": "What was the value of 'Other non-current assets' in 2025?", "expected_output": "$83,727 Million [cite: 804, 953]"},
 
-        # # GROUP 6: Balance Sheet - Liabilities & Equity
+        # # # GROUP 6: Balance Sheet - Liabilities & Equity
         # {"input": "What was the total liabilities for 2025?", "expected_output": "$285,508 Million [cite: 804]"},
         # {"input": "Identify the total 'Accounts payable' for 2025.", "expected_output": "$69,860 Million [cite: 804]"},
         # {"input": "What was the 'Other current liabilities' balance in 2025?", "expected_output": "$66,387 Million [cite: 804, 955]"},
@@ -199,7 +217,7 @@ def get_100_questions():
         # {"input": "Identify the 'Accumulated deficit' as of Sept 27, 2025.", "expected_output": "-$14,264 Million [cite: 804, 809]"},
         # {"input": "What was the 'Common stock and additional paid-in capital' in 2025?", "expected_output": "$93,568 Million [cite: 804, 809]"},
 
-        # # # GROUP 7: Cash Flow
+        # # # # GROUP 7: Cash Flow
         # {"input": "How much cash was generated by operating activities in 2025?", "expected_output": "$111,482 Million [cite: 815]"},
         # {"input": "How much cash was generated by investing activities in 2025?", "expected_output": "$15,195 Million [cite: 815]"},
         # {"input": "How much cash was used in financing activities in 2025?", "expected_output": "$120,686 Million [cite: 815]"},
@@ -211,7 +229,7 @@ def get_100_questions():
         # {"input": "How much did Apple spend on PPE (Capital Expenditures) in 2025?", "expected_output": "$12,715 Million [cite: 815]"},
         # {"input": "What was the cash paid for income taxes, net, in 2025?", "expected_output": "$43,369 Million [cite: 815]"},
 
-        # # GROUP 8: Risk Factors & Legal
+        # # # GROUP 8: Risk Factors & Legal
         # {"input": "What is the new risk regarding tariffs mentioned in 2025?", "expected_output": "New U.S. tariffs on imports from China, India, Japan, South Korea, Taiwan, Vietnam and the EU [cite: 224, 648]"},
         # {"input": "Identify the fine amount for the Commission Article 5(4) investigation.", "expected_output": "€500 million [cite: 554]"},
         # {"input": "Who filed a civil antitrust lawsuit against Apple in March 2024?", "expected_output": "The DOJ and a number of state and district attorneys general [cite: 560]"},
@@ -223,7 +241,7 @@ def get_100_questions():
         # {"input": "What impact does a strong U.S. dollar have on Apple?", "expected_output": "Adversely affects the U.S. dollar value of foreign currency-denominated sales and earnings [cite: 492]"},
         # {"input": "Identify the court hearing the Epic Games appeal in Oct 2025.", "expected_output": "U.S. Court of Appeals for the Ninth Circuit [cite: 574, 575]"},
 
-        # # GROUP 9: Employee & Corporate
+        # # # GROUP 9: Employee & Corporate
         # {"input": "How many full-time equivalent employees did Apple have in 2025?", "expected_output": "166,000 [cite: 175]"},
         # {"input": "Where is Apple's principal executive office located?", "expected_output": "One Apple Park Way, Cupertino, California [cite: 18]"},
         # {"input": "What is the trading symbol for Apple common stock?", "expected_output": "AAPL [cite: 24, 586]"},
@@ -235,7 +253,7 @@ def get_100_questions():
         # {"input": "When did Apple's fiscal year 2025 end?", "expected_output": "September 27, 2025 [cite: 6, 65]"},
         # {"input": "Identify the exchange where Apple's common stock is registered.", "expected_output": "The Nasdaq Stock Market LLC [cite: 24, 586]"},
 
-        # # GROUP 10: Ratios & Synthesis
+        # # # GROUP 10: Ratios & Synthesis
         # {"input": "Identify the 'Unrecognized compensation cost' for RSUs as of September 2025.", "expected_output": "$21.8 Billion [cite: 1047]"},
         # {"input": "What was the grant-date fair value per RSU for grants made in 2025?", "expected_output": "$226.68 [cite: 1038]"},
         # {"input": "What was the aggregate market value of stock held by non-affiliates as of March 28, 2025?", "expected_output": "$3,253,431,000,000 [cite: 56]"},
