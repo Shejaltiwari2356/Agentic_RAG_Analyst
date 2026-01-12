@@ -1,0 +1,155 @@
+{
+    "summary": {
+        "total_tests": 5,
+        "passed": 3,
+        "failed": 2,
+        "timestamp": "2026-01-12 13:08:26.560605"
+    },
+    "detailed_results": [
+        {
+            "input": "Which product category saw a 4% decrease in sales in 2025?",
+            "actual_output": "Based on the table \"Products and Services Performance,\" Wearables, Home and Accessories saw a 4% decrease in net sales in 2025. The net sales for Wearables, Home and Accessories in 2025 were $35,686 million, compared to $37,005 million in 2024, representing a (4)% change. The Wearables, Home and Accessories net sales decreased during 2025 compared to 2024 primarily due to lower net sales of Accessories and Wearables.\nThe Wearables, Home and Accessories product category saw a 4% decrease in sales in 2025.\n",
+            "expected_output": "Wearables, Home and Accessories [cite: 672, 681]",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant information. Keep up the great work!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.0 because the nodes that are not directly relevant, such as the third node which 'discusses the increase in net sales in the Americas region', are ranked lower than the relevant nodes, such as the first node which mentions ''Wearables, Home and Accessories net sales decreased during 2025 compared to 2024''.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# Wearables, Home and Accessories\n\nWearables, Home and Accessories net sales decreased during 2025 compared to 2024 primarily due to lower net sales of Accessories and Wearables."
+            ]
+        },
+        {
+            "input": "What was the year-over-year growth percentage for Services in 2025?",
+            "actual_output": "The Services net sales increased during 2025 compared to 2024. The year-over-year growth percentage for Services in 2025 is 15.85%. The calculation is: ((82314 - 71050) / 71050) * 100 = 15.85.\n",
+            "expected_output": "14% [cite: 672]",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.00 because all nodes in the retrieval contexts are irrelevant. For example, the first node mentions that 'Services net sales increased during 2025 compared to 2024', but it does not provide the percentage. Similarly, the second node discusses the increase in Services gross margin but lacks the year-over-year growth percentage. Therefore, there are no relevant nodes ranked higher than irrelevant nodes.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# Services\n\nServices net sales increased during 2025 compared to 2024 primarily due to higher net sales from advertising, the App Store and cloud services.\n\nApple Inc. | 2025 Form 10-K | 23"
+            ]
+        },
+        {
+            "input": "How much did iPhone sales grow compared to 2024?",
+            "actual_output": "iPhone net sales increased by 4.18% during 2025 compared to 2024. The calculation is (209586 - 201183) / 201183 = 0.0418.\n",
+            "expected_output": "4% [cite: 672]",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 0.5,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.50 because the actual output incorrectly states that iPhone net sales increased by 4.18% when the retrieval context says the increase was 4%.",
+                    "success": false
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there were no irrelevant statements.",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.14285714285714285,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.14 because the first six nodes are irrelevant, as they state that while 'iPhone net sales increased during 2025 compared to 2024', they 'doesn't provide the specific percentage increase'. The seventh node is relevant, as it 'contains a table that shows 'iPhone' sales increased by '4 %' from 2024 to 2025', but it is ranked seventh. The eighth node is irrelevant, as it 'doesn't explicitly state the percentage increase from 2024 to 2025'.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# iPhone\n\niPhone net sales increased during 2025 compared to 2024 due to higher net sales of Pro models."
+            ]
+        },
+        {
+            "input": "What was the net sales growth for Mac in 2025?",
+            "actual_output": "The net sales for Mac increased from $29,984 million in 2024 to $33,708 million in 2025. The growth rate is 12.42%. Calculation: ($33,708 - $29,984) / $29,984 = 0.12419957310565635.\nThe net sales growth for Mac in 2025 is 12.42%.\n",
+            "expected_output": "12% [cite: 672]",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there were no irrelevant statements.",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.0 because all relevant nodes are ranked higher than the irrelevant node. The eighth node is irrelevant because, as stated in its 'reason', \"This context mentions that 'Services net sales increased during 2025 compared to 2024', which is not directly related to Mac sales.\"",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# Mac\n\nMac net sales increased during 2025 compared to 2024 primarily due to higher net sales of laptops and desktops."
+            ]
+        },
+        {
+            "input": "Did iPad net sales increase or decrease in 2025, and by how much?",
+            "actual_output": "iPad net sales increased in 2025 by $1,329 Million. The net sales were $28,023 Million in 2025 and $26,694 Million in 2024. The change is calculated as $28,023 - $26,694.\n",
+            "expected_output": "Increased by 5% [cite: 672]",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and addresses the question directly.",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because all relevant nodes are ranked higher than irrelevant nodes, indicating perfect precision! The first node 'directly answers the question by stating \\'iPad net sales increased during 2025 compared to 2024\\'', the second node 'mentions that \\'Japan net sales increased during 2025 compared to 2024 primarily due to higher net sales of iPhone, Services and iPad.\\'', the third node 'provides a table showing that \\'iPad\\' net sales increased by \\'5%\\' in 2025 compared to 2024', and the fourth node 'provides a table showing the net sales for iPad in 2025, 2024, and 2023' are all ranked higher than the fifth, sixth, seventh, and eighth nodes that do not provide information about iPad sales.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# iPad\n\niPad net sales increased during 2025 compared to 2024 primarily due to higher net sales of iPad Air, iPad mini and iPad, partially offset by lower net sales of iPad Pro."
+            ]
+        }
+    ]
+}

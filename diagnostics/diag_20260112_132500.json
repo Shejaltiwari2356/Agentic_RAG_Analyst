@@ -1,0 +1,184 @@
+{
+    "summary": {
+        "total_tests": 6,
+        "passed": 0,
+        "failed": 6,
+        "timestamp": "2026-01-12 13:25:00.865547"
+    },
+    "detailed_results": [
+        {
+            "input": "What was the net sales for 'Rest of Asia Pacific' in 2025?",
+            "actual_output": "The net sales for Rest of Asia Pacific in 2025 is $33,696 Million.\n",
+            "expected_output": "$33,696 Million [cite: 657, 1081]",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 0.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.00 because the actual output incorrectly states the net sales for Rest of Asia Pacific in 2025 as $33,696 Million, when it should be $33,696.",
+                    "success": false
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response perfectly answers the question with no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the nodes are perfectly ranked! All relevant nodes appear before the irrelevant nodes. It's a beautiful thing when the algorithm works this well.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# Rest of Asia Pacific\n\nRest of Asia Pacific net sales increased during 2025 compared to 2024 primarily due to higher net sales of iPhone, Services and Mac.\n\nApple Inc. | 2025 Form 10-K | 22"
+            ]
+        },
+        {
+            "input": "Which geographic segment had the highest operating income in 2025?",
+            "actual_output": "The geographic segment with the highest operating income in 2025 was Americas, with $72,480 Million.\n",
+            "expected_output": "Americas ($72,480 Million) [cite: 1081]",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and complete.",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.25,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.25 because the first three nodes are irrelevant, with reasons such as 'This document provides a table of net sales by segment, but the question asks about operating income', 'This document discusses the adoption of ASU 2023-07 and its impact on segment reporting, which is related to segment disclosures but does not directly answer the question about operating income', and 'This document provides information on operating expenses, not operating income'. These should be ranked lower than the fourth node, which directly answers the question because 'This document contains a table that shows \\'Operating income/(loss)\\' for different geographic segments in 2025'.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# Segment Operating Performance\n\nThe following table shows net sales by reportable segment for 2025, 2024 and 2023 (dollars in millions):\n\n|                      | 2025      | Change | 2024      | Change | 2023      |\n| -------------------- | --------- | ------ | --------- | ------ | --------- |\n| Americas             | $ 178,353 | 7 %    | $ 167,045 | 3 %    | $ 162,560 |\n| Europe               | $ 111,032 | 10 %   | $ 101,328 | 7 %    | $ 94,294  |\n| Greater China        | $ 64,377  | (4)%   | $ 66,952  | (8)%   | $ 72,559  |\n| Japan                | $ 28,703  | 15 %   | $ 25,052  | 3 %    | $ 24,257  |\n| Rest of Asia Pacific | $ 33,696  | 10 %   | $ 30,658  | 4 %    | $ 29,615  |\n| Total net sales      | $ 416,161 | 6 %    | $ 391,035 | 2 %    | $ 383,285 |"
+            ]
+        },
+        {
+            "input": "State the operating income for the Europe segment in 2025.",
+            "actual_output": "The operating income for the Europe segment in 2025 is $47,739 Million.\n",
+            "expected_output": "$47,739 Million [cite: 1081]",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response perfectly answers the question without any irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.2,
+                    "threshold": 0.7,
+                    "reason": "The contextual precision score is 0.20 because the first four nodes are irrelevant, with reasons such as 'This document provides net sales by reportable segment for 2025, but the question asks for operating income, not net sales. Therefore, it is not directly useful.' and 'This document discusses the adoption of ASU 2023-07 and its impact on segment reporting, which is not directly related to the operating income of the Europe segment in 2025.'. The fifth node is relevant, while the sixth, seventh, and eighth nodes are irrelevant, with reasons such as 'This document provides consolidated statements of operations, including net sales, cost of sales, operating expenses, and operating income, but it does not break down the operating income by segment. Therefore, it is not directly useful.' and 'This document contains a table that shows the 'Operating income/(loss)' for the 'Europe' segment in '2024' as '$ 41,790'. This is not the information requested.'.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# Segment Operating Performance\n\nThe following table shows net sales by reportable segment for 2025, 2024 and 2023 (dollars in millions):\n\n|                      | 2025      | Change | 2024      | Change | 2023      |\n| -------------------- | --------- | ------ | --------- | ------ | --------- |\n| Americas             | $ 178,353 | 7 %    | $ 167,045 | 3 %    | $ 162,560 |\n| Europe               | $ 111,032 | 10 %   | $ 101,328 | 7 %    | $ 94,294  |\n| Greater China        | $ 64,377  | (4)%   | $ 66,952  | (8)%   | $ 72,559  |\n| Japan                | $ 28,703  | 15 %   | $ 25,052  | 3 %    | $ 24,257  |\n| Rest of Asia Pacific | $ 33,696  | 10 %   | $ 30,658  | 4 %    | $ 29,615  |\n| Total net sales      | $ 416,161 | 6 %    | $ 391,035 | 2 %    | $ 383,285 |"
+            ]
+        },
+        {
+            "input": "What was the operating income for Greater China in 2025?",
+            "actual_output": "The operating income for Greater China in 2025 is $26,917 Million, according to the Segment Information.\n",
+            "expected_output": "$26,917 Million [cite: 1081]",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response perfectly answers the question without any irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.2,
+                    "threshold": 0.7,
+                    "reason": "The contextual precision score is 0.20 because the first four nodes are irrelevant. The first node is irrelevant because, according to its 'reason', it provides net sales, 'not net sales', while the input asks for operating income. The second node is irrelevant because, according to its 'reason', it discusses ASU 2023-07, but 'it does not provide any information about the operating income for Greater China in 2025'. The third node is irrelevant because, according to its 'reason', it provides information about operating expenses, but 'it does not provide any information about the operating income for Greater China in 2025'. The fourth node is irrelevant because, according to its 'reason', it introduces tables that 'could potentially contain the answer'.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# Segment Operating Performance\n\nThe following table shows net sales by reportable segment for 2025, 2024 and 2023 (dollars in millions):\n\n|                      | 2025      | Change | 2024      | Change | 2023      |\n| -------------------- | --------- | ------ | --------- | ------ | --------- |\n| Americas             | $ 178,353 | 7 %    | $ 167,045 | 3 %    | $ 162,560 |\n| Europe               | $ 111,032 | 10 %   | $ 101,328 | 7 %    | $ 94,294  |\n| Greater China        | $ 64,377  | (4)%   | $ 66,952  | (8)%   | $ 72,559  |\n| Japan                | $ 28,703  | 15 %   | $ 25,052  | 3 %    | $ 24,257  |\n| Rest of Asia Pacific | $ 33,696  | 10 %   | $ 30,658  | 4 %    | $ 29,615  |\n| Total net sales      | $ 416,161 | 6 %    | $ 391,035 | 2 %    | $ 383,285 |"
+            ]
+        },
+        {
+            "input": "What was the operating income for 'Rest of Asia Pacific' in 2025?",
+            "actual_output": "The operating income for 'Rest of Asia Pacific' in 2025 is $14,586 Million.\n",
+            "expected_output": "$14,586 Million [cite: 1081]",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 0.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.00 because the actual output incorrectly states the operating income for 'Rest of Asia Pacific' in 2025 as $14,586 Million, when it should be $14,586.",
+                    "success": false
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the relevant node was ranked first, and all subsequent nodes were correctly deemed irrelevant, as they either provided information for a different year ('This document provides the operating income for \\'Rest of Asia Pacific\\' in 2024, which is \\'$ 13,062\\'. While related, it doesn't directly answer the question about 2025.') in the second node, discussed net sales instead of operating income ('This document provides net sales information for \\'Rest of Asia Pacific\\' in 2025, but the question asks about operating income. Therefore, it is not directly relevant.') in the third node, or lacked financial data related to operating income ('This document describes the composition of the \\'Rest of Asia Pacific\\' segment and how the company manages its business geographically. It does not contain any financial data related to operating income.') in the fourth node.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# 2025\n\n|                            | Americas  | Europe    | Greater China | Japan    | Rest of Asia Pacific | Corporate | Total     |\n| -------------------------- | --------- | --------- | ------------- | -------- | -------------------- | --------- | --------- |\n| Net sales                  | $ 178,353 | $ 111,032 | $ 64,377      | $ 28,703 | $ 33,696             | $ \u2014       | $ 416,161 |\n| Cost of sales              | (95,699)  | (58,617)  | (35,141)      | (13,779) | (17,724)             | $ \u2014       | (220,960) |\n| Research and development   | $ \u2014       | $ \u2014       | $ \u2014           | $ \u2014      | $ \u2014                  | (34,550)  | (34,550)  |\n| Selling and marketing      | (10,174)  | (4,676)   | (2,319)       | (969)    | (1,386)              | $ \u2014       | (19,524)  |\n| General and administrative | $ \u2014       | $ \u2014       | $ \u2014           | $ \u2014      | $ \u2014                  | (8,077)   | (8,077)   |\n| Operating income/(loss)    | $ 72,480  | $ 47,739  | $ 26,917      | $ 13,955 | $ 14,586             | (42,627)  | $ 133,050 |"
+            ]
+        },
+        {
+            "input": "How much was the operating income for Japan in 2025?",
+            "actual_output": "The operating income for Japan in 2025 is $13,955 Million.\n",
+            "expected_output": "$13,955 Million [cite: 1081]",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 0.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.00 because the actual output incorrectly states the operating income for Japan in 2025 as $13,955 Million, when it should be $13,955.",
+                    "success": false
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.0 because the first node contains a table that directly answers the question, while the subsequent nodes are less relevant. For example, the second node, while related to financial performance, 'doesn't directly provide the operating income'. Similarly, the third and fourth nodes provide financial data for 2023 and 2024 respectively, but the question specifically asks about 2025, making them less relevant. Great job!",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# 2025\n\n|                            | Americas  | Europe    | Greater China | Japan    | Rest of Asia Pacific | Corporate | Total     |\n| -------------------------- | --------- | --------- | ------------- | -------- | -------------------- | --------- | --------- |\n| Net sales                  | $ 178,353 | $ 111,032 | $ 64,377      | $ 28,703 | $ 33,696             | $ \u2014       | $ 416,161 |\n| Cost of sales              | (95,699)  | (58,617)  | (35,141)      | (13,779) | (17,724)             | $ \u2014       | (220,960) |\n| Research and development   | $ \u2014       | $ \u2014       | $ \u2014           | $ \u2014      | $ \u2014                  | (34,550)  | (34,550)  |\n| Selling and marketing      | (10,174)  | (4,676)   | (2,319)       | (969)    | (1,386)              | $ \u2014       | (19,524)  |\n| General and administrative | $ \u2014       | $ \u2014       | $ \u2014           | $ \u2014      | $ \u2014                  | (8,077)   | (8,077)   |\n| Operating income/(loss)    | $ 72,480  | $ 47,739  | $ 26,917      | $ 13,955 | $ 14,586             | (42,627)  | $ 133,050 |"
+            ]
+        }
+    ]
+}

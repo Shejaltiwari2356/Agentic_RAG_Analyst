@@ -1,0 +1,300 @@
+{
+    "summary": {
+        "total_tests": 10,
+        "passed": 7,
+        "failed": 3,
+        "timestamp": "2026-01-12 14:38:45.527983"
+    },
+    "detailed_results": [
+        {
+            "input": "What was the total Research and Development (R&D) expense in 2025?",
+            "actual_output": "The Research and Development expense for 2025 is $34,550 Million, according to the Consolidated Statements of Operations.",
+            "expected_output": "$34,550 Million [cite: 698, 793]",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response perfectly answers the question without irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.5,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.50 because the second node contains the answer, while the first node, according to its 'reason', 'does not contain the specific R&D expense figure'. Therefore, an irrelevant node is ranked higher than a relevant node. The third node 'doesn't provide the specific R&D expense figure', so it should be ranked lower as well.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# Index to Consolidated Financial Statements\n\n| Consolidated Statements of Operations for the years ended September 27, 2025, September 28, 2024 and September 30, 2023           | 29 |\n| --------------------------------------------------------------------------------------------------------------------------------- | -- |\n| Consolidated Statements of Comprehensive Income for the years ended September 27, 2025, September 28, 2024 and September 30, 2023 | 30 |\n| Consolidated Balance Sheets as of September 27, 2025 and September 28, 2024                                                       | 31 |\n| Consolidated Statements of Shareholders\u2019 Equity for the years ended September 27, 2025, September 28, 2024 and September 30, 2023 | 32 |\n| Consolidated Statements of Cash Flows for the years ended September 27, 2025, September 28, 2024 and September 30, 2023           | 33 |\n| Notes to Consolidated Financial Statements                                                                                        | 34 |\n| Reports of Independent Registered Public Accounting Firm                                                                          | 49 |\n\nAll financial statement schedules have been omitted, since the required information is not applicable or is not present in amounts sufficient to require submission of the schedule, or because the information required is included in the consolidated financial statements and accompanying notes.\n\nApple Inc. | 2025 Form 10-K | 28"
+            ]
+        },
+        {
+            "input": "How much did Apple spend on Selling, General and Administrative (SG&A) in 2025?",
+            "actual_output": "The Selling, general and administrative expenses for 2025 were $27,601 Million.\n",
+            "expected_output": "$27,601 Million [cite: 698, 793]",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response perfectly answers the question without irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.0 because all relevant nodes are ranked higher than irrelevant nodes. The first node mentions the 'growth in selling, general and administrative expense during 2025', the second node provides a table that includes 'Selling, general and administrative' expenses for 2025, and the third node provides a 'CONSOLIDATED STATEMENTS OF OPERATIONS' table that includes 'Selling, general and administrative' expenses for 2025. These are ranked higher than the fourth node which includes 'General and administrative' expenses for the 'Corporate' segment, but not the total SG&A, the fifth node which includes 'General and administrative' expenses for the 'Corporate' segment, but not the total SG&A for 2025, the sixth node which discusses 'Business Seasonality and Product Introductions' and their impact on net sales, cost of sales, and operating expenses, the seventh node which discusses 'Marketable Securities', and the eighth node which provides information about 'Operating activities'.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# Selling, General and Administrative\n\nThe growth in selling, general and administrative expense during 2025 compared to 2024 was primarily driven by increases in headcount-related expenses and variable selling expenses."
+            ]
+        },
+        {
+            "input": "What drove the increase in R&D expenses in 2025?",
+            "actual_output": "The growth in R&D expense during 2025 compared to 2024 was primarily driven by increases in headcount-related expenses and infrastructure-related costs.",
+            "expected_output": "Increases in headcount-related expenses and infrastructure-related costs [cite: 700]",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there were no irrelevant statements, indicating a perfectly relevant response! Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the nodes that answer the question about R&D expenses are ranked higher than the irrelevant nodes. For example, the third node is less directly relevant because it 'primarily focuses on the numerical values and percentages rather than the underlying drivers of the increase', and the fourth node is irrelevant because it discusses 'selling, general, and administrative expenses, which is not directly related to the question about R&D expenses.'",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations\n\nThe following discussion should be read in conjunction with the consolidated financial statements and accompanying notes included in Part II, Item 8 of this Form 10-K. This Item generally discusses 2025 and 2024 items and year-to-year comparisons between 2025 and 2024. Discussions of 2023 items and year-to-year comparisons between 2024 and 2023 are not included, and can be found in \u201cManagement\u2019s Discussion and Analysis of Financial Condition and Results of Operations\u201d in Part II, Item 7 of the Company\u2019s Annual Report on Form 10-K for the fiscal year ended September 28, 2024."
+            ]
+        },
+        {
+            "input": "What were the total operating expenses in 2025?",
+            "actual_output": "The total operating expenses for 2025 are $62,151 Million.",
+            "expected_output": "$62,151 Million [cite: 698, 793]",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.8333333333333333,
+                    "threshold": 0.7,
+                    "reason": "The contextual precision score is 0.83 because the second node, which states that it 'does not directly state the total operating expenses for 2025' but includes 'Net income $112,010', should have been ranked lower since it is not directly relevant. All other irrelevant nodes are ranked lower than the relevant nodes.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# Operating Expenses\n\nOperating expenses for 2025, 2024 and 2023 were as follows (dollars in millions):\n\n|                                     | 2025     | Change | 2024     | Change | 2023     |\n| ----------------------------------- | -------- | ------ | -------- | ------ | -------- |\n| Research and development            | $ 34,550 | 10 %   | $ 31,370 | 5 %    | $ 29,915 |\n| Percentage of total net sales       | 8%       |        | 8%       |        | 8%       |\n| Selling, general and administrative | $ 27,601 | 6 %    | $ 26,097 | 5 %    | $ 24,932 |\n| Percentage of total net sales       | 7%       |        | 7%       |        | 7%       |\n| Total operating expenses            | $ 62,151 | 8 %    | $ 57,467 | 5 %    | $ 54,847 |\n| Percentage of total net sales       | 15%      |        | 15%      |        | 14%      |"
+            ]
+        },
+        {
+            "input": "What drove the increase in SG&A expenses in 2025?",
+            "actual_output": "The growth in selling, general and administrative expense during 2025 compared to 2024 was primarily driven by increases in headcount-related expenses and variable selling expenses. SG&A expenses were $27,601 Million in 2025.",
+            "expected_output": "Increases in headcount-related expenses and variable selling expenses [cite: 702]",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there were no irrelevant statements, indicating a perfectly relevant response! Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.3333333333333333,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.33 because the first node, which states that 'This document provides a table showing the operating expenses for 2025, 2024, and 2023, including 'Selling, general and administrative' expenses, which is relevant to the question. However, it doesn't explain the *drivers* of the increase.', is not as relevant as the third node, which 'directly answers the question'. Similarly, the second node, which states 'This document explains the growth in R&D expense, not SG&A. Therefore, it is not relevant.', is also not relevant.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# Operating Expenses\n\nOperating expenses for 2025, 2024 and 2023 were as follows (dollars in millions):\n\n|                                     | 2025     | Change | 2024     | Change | 2023     |\n| ----------------------------------- | -------- | ------ | -------- | ------ | -------- |\n| Research and development            | $ 34,550 | 10 %   | $ 31,370 | 5 %    | $ 29,915 |\n| Percentage of total net sales       | 8%       |        | 8%       |        | 8%       |\n| Selling, general and administrative | $ 27,601 | 6 %    | $ 26,097 | 5 %    | $ 24,932 |\n| Percentage of total net sales       | 7%       |        | 7%       |        | 7%       |\n| Total operating expenses            | $ 62,151 | 8 %    | $ 57,467 | 5 %    | $ 54,847 |\n| Percentage of total net sales       | 15%      |        | 15%      |        | 14%      |"
+            ]
+        },
+        {
+            "input": "What was the R&D expense in 2024?",
+            "actual_output": "The Research and Development expense for 2024 is $31,370 Million.\n",
+            "expected_output": "$31,370 Million [cite: 698, 793]",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.7555555555555555,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.76 because the second node, which 'does not contain information about R&D expenses', should ideally be ranked lower. Similarly, the fourth node, which mentions R&D but 'it's for 2025, not 2024', and the sixth, seventh, and eighth nodes, which 'does not provide information about R&D expenses', 'does not contain specific information about R&D expenses', and 'does not contain information about R&D expenses' respectively, should also be ranked lower.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# Operating Expenses\n\nOperating expenses for 2025, 2024 and 2023 were as follows (dollars in millions):\n\n|                                     | 2025     | Change | 2024     | Change | 2023     |\n| ----------------------------------- | -------- | ------ | -------- | ------ | -------- |\n| Research and development            | $ 34,550 | 10 %   | $ 31,370 | 5 %    | $ 29,915 |\n| Percentage of total net sales       | 8%       |        | 8%       |        | 8%       |\n| Selling, general and administrative | $ 27,601 | 6 %    | $ 26,097 | 5 %    | $ 24,932 |\n| Percentage of total net sales       | 7%       |        | 7%       |        | 7%       |\n| Total operating expenses            | $ 62,151 | 8 %    | $ 57,467 | 5 %    | $ 54,847 |\n| Percentage of total net sales       | 15%      |        | 15%      |        | 14%      |"
+            ]
+        },
+        {
+            "input": "What was the SG&A expense in 2024?",
+            "actual_output": "The Selling, general and administrative expense for 2024 is $26,097 Million.\n",
+            "expected_output": "$26,097 Million [cite: 698, 793]",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response perfectly answers the question without any irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.8333333333333333,
+                    "threshold": 0.7,
+                    "reason": "The contextual precision score is 0.83 because while the first node is relevant, the second node is irrelevant as 'This document provides context on the growth of SG&A expenses but does not directly provide the value for 2024.' This irrelevant node should have been ranked lower. The third node is relevant, but the fourth, fifth, sixth, seventh, and eighth nodes are irrelevant because 'This document discusses research and development expenses, not SG&A', 'This document provides net sales by segment, not SG&A expenses', \"This document provides a breakdown of net sales, cost of sales, research and development, selling and marketing, and general and administrative expenses by region, but it doesn't directly state the total SG&A expense for 2024.\", 'This document discusses lease liabilities, not SG&A expenses', and \"This document is a general statement about the discussion of financial conditions and results of operations, but it doesn't provide specific financial figures for SG&A expenses in 2024.\" respectively.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# Operating Expenses\n\nOperating expenses for 2025, 2024 and 2023 were as follows (dollars in millions):\n\n|                                     | 2025     | Change | 2024     | Change | 2023     |\n| ----------------------------------- | -------- | ------ | -------- | ------ | -------- |\n| Research and development            | $ 34,550 | 10 %   | $ 31,370 | 5 %    | $ 29,915 |\n| Percentage of total net sales       | 8%       |        | 8%       |        | 8%       |\n| Selling, general and administrative | $ 27,601 | 6 %    | $ 26,097 | 5 %    | $ 24,932 |\n| Percentage of total net sales       | 7%       |        | 7%       |        | 7%       |\n| Total operating expenses            | $ 62,151 | 8 %    | $ 57,467 | 5 %    | $ 54,847 |\n| Percentage of total net sales       | 15%      |        | 15%      |        | 14%      |"
+            ]
+        },
+        {
+            "input": "Identify the 'Other income/(expense), net' for 2025.",
+            "actual_output": "The 'Other income/(expense), net' for 2025 is ($321) Million.",
+            "expected_output": "-$321 Million [cite: 793]",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response perfectly answers the question with no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.5,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.50 because the second node contains the information requested, stating \"This document contains the exact information requested. It shows that 'Other income/(expense), net' for 2025 is '($321)' million. The document also specifies that the values are 'In millions'.\" However, the first node, which is irrelevant, is ranked higher because \"This document focuses on operating activities and does not contain information about 'Other income/(expense), net' for 2025.\"",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# Operating activities:\n\n| Net income                                                                     |   | $112,010  | $93,736   | $96,995  |\n| ------------------------------------------------------------------------------ | - | --------- | --------- | -------- |\n| Adjustments to reconcile net income to cash generated by operating activities: |   |           |           |          |\n| Depreciation and amortization                                                  |   | $11,698   | $11,445   | $11,519  |\n| Share-based compensation expense                                               |   | $12,863   | $11,688   | $10,833  |\n| Other                                                                          |   | ($89)     | ($2,266)  | ($2,227) |\n| Changes in operating assets and liabilities:                                   |   |           |           |          |\n| Accounts receivable, net                                                       |   | ($6,682)  | ($3,788)  | ($1,688) |\n| Vendor non-trade receivables                                                   |   | ($347)    | ($1,356)  | $1,271   |\n| Inventories                                                                    |   | $1,400    | ($1,046)  | ($1,618) |\n| Other current and non-current assets                                           |   | ($9,197)  | ($11,731) | ($5,684) |\n| Accounts payable                                                               |   | $902      | $6,020    | ($1,889) |\n| Other current and non-current liabilities                                      |   | ($11,076) | $15,552   | $3,031   |\n| Cash generated by operating activities                                         |   | $111,482  | $118,254  | $110,543 |"
+            ]
+        },
+        {
+            "input": "What was the effective tax rate reported for 2025?",
+            "actual_output": "The effective tax rate for 2025 is 15.6%.\n",
+            "expected_output": "15.6% [cite: 706, 971]",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there were no irrelevant statements.",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the first node directly answers the question by providing a table that includes the 'Effective tax rate' for 2025 as '15.6%', while the subsequent nodes are all irrelevant. The second node provides information about 'Income taxes payable' but does not directly state the effective tax rate for 2025. The third node mentions 'Income Taxes' but does not provide the effective tax rate for 2025. The fourth node discusses 'deferred tax assets and liabilities' but does not provide the effective tax rate for 2025. The fifth node is labeled '# PART I' and does not contain any information about the effective tax rate. The sixth node discusses 'Revenue' and taxes collected from customers, but it does not provide the effective tax rate for 2025. The seventh node is labeled '# PART III' and does not contain any information about the effective tax rate. The eighth node is labeled '# PART IV' and does not contain any information about the effective tax rate.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# Reconciliation of the Provision for Income Taxes\n\nA reconciliation of the provision for income taxes to the amount computed by applying the statutory federal income tax rate (21% in 2025, 2024 and 2023) to income before provision for income taxes for 2025, 2024 and 2023 is as follows (dollars in millions):\n\n|                                      | 2025     | 2024     | 2023     |\n| ------------------------------------ | -------- | -------- | -------- |\n| Computed expected tax                | $ 27,873 | $ 25,932 | $ 23,885 |\n| Earnings of foreign subsidiaries     | (8,120)  | (5,311)  | (5,744)  |\n| Change in valuation allowance        | 2,091    | \u2014        | \u2014        |\n| Research and development credit, net | (1,049)  | (1,397)  | (1,212)  |\n| Impact of the State Aid Decision     | (486)    | 10,246   | \u2014        |\n| Other                                | 410      | 279      | (188)    |\n| Provision for income taxes           | $ 20,719 | $ 29,749 | $ 16,741 |\n| Effective tax rate                   | 15.6%    | 24.1%    | 14.7%    |"
+            ]
+        },
+        {
+            "input": "What was the effective tax rate in 2024?",
+            "actual_output": "The effective tax rate for 2024 is 24.1%.\n",
+            "expected_output": "24.1% [cite: 706, 971]",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there were no irrelevant statements.",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because all nodes that do not directly answer the question about the effective tax rate, such as the second node which provides information about 'Income taxes payable' for 2024 but does not directly answer the question, are ranked lower than the first node, which 'directly provides the effective tax rate for 2024 as 24.1%.' Great job!",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# Reconciliation of the Provision for Income Taxes\n\nA reconciliation of the provision for income taxes to the amount computed by applying the statutory federal income tax rate (21% in 2025, 2024 and 2023) to income before provision for income taxes for 2025, 2024 and 2023 is as follows (dollars in millions):\n\n|                                      | 2025     | 2024     | 2023     |\n| ------------------------------------ | -------- | -------- | -------- |\n| Computed expected tax                | $ 27,873 | $ 25,932 | $ 23,885 |\n| Earnings of foreign subsidiaries     | (8,120)  | (5,311)  | (5,744)  |\n| Change in valuation allowance        | 2,091    | \u2014        | \u2014        |\n| Research and development credit, net | (1,049)  | (1,397)  | (1,212)  |\n| Impact of the State Aid Decision     | (486)    | 10,246   | \u2014        |\n| Other                                | 410      | 279      | (188)    |\n| Provision for income taxes           | $ 20,719 | $ 29,749 | $ 16,741 |\n| Effective tax rate                   | 15.6%    | 24.1%    | 14.7%    |"
+            ]
+        }
+    ]
+}
