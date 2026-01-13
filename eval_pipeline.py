@@ -146,11 +146,11 @@ def get_100_questions():
 
     
         # # GROUP 1: Revenue & Financial Performance
-        # {"input": "What was Apple's total net sales for the fiscal year ended September 27, 2025?", "expected_output": "$416,161 Million [cite: 657, 793]"},
-        # {"input": "Identify the total net income for 2025.", "expected_output": "$112,010 Million [cite: 793, 890]"},
-        # {"input": "What was the percentage increase in total net sales from 2024 to 2025?", "expected_output": "6% [cite: 657, 672]"},
-        # {"input": "What was the gross margin percentage for 2025?", "expected_output": "46.9% [cite: 687]"},
-        # {"input": "What was the basic earnings per share in 2025?", "expected_output": "$7.49 [cite: 793, 890]"},
+        {"input": "What was Apple's total net sales for the fiscal year ended September 27, 2025?", "expected_output": "$416,161 Million [cite: 657, 793]"},
+        {"input": "Identify the total net income for 2025.", "expected_output": "$112,010 Million [cite: 793, 890]"},
+        {"input": "What was the percentage increase in total net sales from 2024 to 2025?", "expected_output": "6% [cite: 657, 672]"},
+        {"input": "What was the gross margin percentage for 2025?", "expected_output": "46.9% [cite: 687]"},
+        {"input": "What was the basic earnings per share in 2025?", "expected_output": "$7.49 [cite: 793, 890]"},
         # {"input": "What was the diluted earnings per share in 2025?", "expected_output": "$7.46 [cite: 793, 890]"},
         # {"input": "How much was the operating income for 2025?", "expected_output": "$133,050 Million [cite: 793, 1081]"},
         # {"input": "Identify the total cost of sales for 2025.", "expected_output": "$220,960 Million [cite: 793]"},
