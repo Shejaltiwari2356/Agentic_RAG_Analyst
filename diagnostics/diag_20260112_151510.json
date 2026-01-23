@@ -1,0 +1,445 @@
+{
+    "summary": {
+        "total_tests": 15,
+        "passed": 3,
+        "failed": 12,
+        "timestamp": "2026-01-12 15:15:10.676270"
+    },
+    "detailed_results": [
+        {
+            "input": "What was the total value of 'Other non-current assets' in 2025?",
+            "actual_output": "The value of Other non-current assets for 2025 is $62,950 Million.",
+            "expected_output": "$83,727 Million ",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 0.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.00 because the actual output incorrectly states the value of Other non-current assets for 2025 as $62,950 Million, when it should be $62,950.",
+                    "success": false
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because all nodes containing irrelevant information were ranked lower than the relevant node. The first node directly provides the answer, while the subsequent nodes discuss topics such as 'Lease-Related Assets and Liabilities', 'Other Purchase Obligations', 'Other Current Liabilities', 'Long-lived Assets', '2025 Notes', 'Derivative Instruments', and 'Property, Plant and Equipment', which are not relevant to the question.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# Other Non-Current Assets\n\n|                                | 2025     | 2024     |\n| ------------------------------ | -------- | -------- |\n| Deferred tax assets            | $ 20,777 | $ 19,499 |\n| Other non-current assets       | $ 62,950 | $ 55,335 |\n| Total other non-current assets | $ 83,727 | $ 74,834 |"
+            ]
+        },
+        {
+            "input": "What was the year-over-year growth percentage for Services in 2025?",
+            "actual_output": "The Services net sales were $71,050 million in 2024 and $82,314 million in 2025. The year-over-year growth percentage for Services in 2025 is 15.85%.\n",
+            "expected_output": "14% ",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant information. Keep up the great work!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because all nodes that are not relevant are ranked lower than the relevant node. The first node mentions that 'Services net sales increased during 2025 compared to 2024', while the subsequent nodes discuss topics such as 'Services gross margin', 'Wearables, Home and Accessories net sales', net sales by reportable segment excluding Services, net sales by geographic region excluding Services, and operating expenses, making them less relevant to the input question.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# Services\n\nServices net sales increased during 2025 compared to 2024 primarily due to higher net sales from advertising, the App Store and cloud services.\n\nApple Inc. | 2025 Form 10-K | 23"
+            ]
+        },
+        {
+            "input": "How much did iPhone sales grow compared to 2024?",
+            "actual_output": "iPhone net sales increased by 4.18% during 2025 compared to 2024. The calculation is (209586 - 201183) / 201183 = 0.04176794261940621.\n",
+            "expected_output": "4% ",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 0.5,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.50 because the iPhone net sales growth is stated as 4.18% in the actual output, but the retrieval context indicates it should be 4%.",
+                    "success": false
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there were no irrelevant statements.",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.0 because all nodes in the retrieval contexts are relevant and ranked accordingly, indicating perfect contextual precision. Great job!",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# iPhone\n\niPhone net sales increased during 2025 compared to 2024 due to higher net sales of Pro models."
+            ]
+        },
+        {
+            "input": "Mention specific cybersecurity threats identified as risks in the 10-K.",
+            "actual_output": "I am unable to provide specific cybersecurity threats without reviewing Item 1A, \"Risk Factors,\" of the 10-K. I can search specifically within Item 1A for more details. Would you like me to do that?\n",
+            "expected_output": "Ransomware, computer viruses, or unauthorized access ",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.00 because all nodes in the retrieval contexts are irrelevant. The first node 'discusses the company's approach to managing cybersecurity risks but does not specifically mention the types of threats identified as risks in the 10-K', the second node 'discusses legal and regulatory compliance risks, including patent claims, but does not mention specific cybersecurity threats', the third node 'is a general statement about risk factors and doesn't mention specific cybersecurity threats', the fourth node 'discusses general risks related to stock price volatility and does not mention specific cybersecurity threats', the fifth node 'is labeled 'Services' and does not mention specific cybersecurity threats', the sixth node 'is labeled 'Exhibit 31.1' and does not mention specific cybersecurity threats', the seventh node 'is labeled '# PART III' and does not mention specific cybersecurity threats', and the eighth node 'is labeled 'Exhibit 31.2' and does not mention specific cybersecurity threats'.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# Item 1C. Cybersecurity\n\nThe Company\u2019s management, led by its Head of Corporate Information Security, has overall responsibility for identifying, assessing and managing any material risks from cybersecurity threats. The Company\u2019s Head of Corporate Information Security leads a dedicated Information Security team of highly skilled individuals with experience across industries that, among other things, develops and distributes information security policies, standards and procedures; engages in employee cybersecurity training; implements security controls; assesses security risk and compliance posture; monitors and responds to security events; and executes security testing and assessments. The Company\u2019s Head of Corporate Information Security has extensive knowledge and skills gained from over 25 years of experience in the cybersecurity industry, including serving in leadership positions at other large technology companies and leading the Company\u2019s Information Security team since 2016.\n\nThe Company\u2019s Information Security team coordinates with teams across the Company to prevent, respond to and manage security incidents, and engages third parties, as appropriate, to assess, test or otherwise assist with aspects of its security processes and incident response. A dedicated Supplier Trust team manages information security risks the Company is exposed to through its supplier relationships. The Company has processes to log, track, address, and escalate for further assessment and report, as appropriate, cybersecurity incidents across the Company and its suppliers to senior management and the Audit and Finance Committee (\u201cAudit Committee\u201d) of the Board. The Company\u2019s enterprise risk management program is designed to identify, assess, and monitor the Company\u2019s business risks, including financial, operational, compliance and reputational risks, and reflects management\u2019s assessment of cybersecurity risks.\n\nThe Audit Committee assists the Board in the oversight and monitoring of cybersecurity matters. The Audit Committee regularly reviews and discusses the Company\u2019s cybersecurity risks with management, including the Company\u2019s Head of Corporate Information Security, its General Counsel and the Heads of Compliance and Business Conduct, Business Assurance, and Internal Audit, and receives updates, as necessary, regarding cybersecurity incidents. The Chair of the Audit Committee regularly reports the substance of such reviews and discussions to the Board, as necessary, and recommends to the Board such actions as the Audit Committee deems appropriate.\n\nFor a discussion of the Company\u2019s cybersecurity-related risks, see Item 1A of this Form 10-K under the heading \u201cRisk Factors.\u201d"
+            ]
+        },
+        {
+            "input": "What is the trading symbol for Apple common stock?",
+            "actual_output": "I am an auditor, and do not have access to that information. I can only access financial data.",
+            "expected_output": "AAPL ",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 0.3333333333333333,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.33 because the AI output contains information about cybersecurity, legal proceedings, and stock performance, but the retrieval context only mentions cybersecurity and legal proceedings. This indicates the AI is hallucinating information about stock performance.",
+                    "success": false
+                },
+                "Answer Relevancy": {
+                    "score": 0.6666666666666666,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.67 because the response included irrelevant information about the AI's role, but it did correctly identify Apple's trading symbol.",
+                    "success": false
+                },
+                "Contextual Precision": {
+                    "score": 0.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.00 because all nodes in the retrieval contexts are irrelevant. The first node discusses 'cybersecurity risks and management', the second node discusses 'legal and regulatory compliance risks', the third node discusses 'risk factors that could affect the company's business and stock price, but it doesn't mention the trading symbol', the fourth node discusses 'general risks, including stock price volatility, but it doesn't mention the trading symbol', the fifth node 'only says 'Services'', the sixth node 'is an exhibit number', the seventh node 'indicates the start of Part III of a form', and the eighth node 'is an exhibit number'. Therefore, there are no relevant nodes ranked higher than irrelevant nodes.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# Item 1C. Cybersecurity\n\nThe Company\u2019s management, led by its Head of Corporate Information Security, has overall responsibility for identifying, assessing and managing any material risks from cybersecurity threats. The Company\u2019s Head of Corporate Information Security leads a dedicated Information Security team of highly skilled individuals with experience across industries that, among other things, develops and distributes information security policies, standards and procedures; engages in employee cybersecurity training; implements security controls; assesses security risk and compliance posture; monitors and responds to security events; and executes security testing and assessments. The Company\u2019s Head of Corporate Information Security has extensive knowledge and skills gained from over 25 years of experience in the cybersecurity industry, including serving in leadership positions at other large technology companies and leading the Company\u2019s Information Security team since 2016.\n\nThe Company\u2019s Information Security team coordinates with teams across the Company to prevent, respond to and manage security incidents, and engages third parties, as appropriate, to assess, test or otherwise assist with aspects of its security processes and incident response. A dedicated Supplier Trust team manages information security risks the Company is exposed to through its supplier relationships. The Company has processes to log, track, address, and escalate for further assessment and report, as appropriate, cybersecurity incidents across the Company and its suppliers to senior management and the Audit and Finance Committee (\u201cAudit Committee\u201d) of the Board. The Company\u2019s enterprise risk management program is designed to identify, assess, and monitor the Company\u2019s business risks, including financial, operational, compliance and reputational risks, and reflects management\u2019s assessment of cybersecurity risks.\n\nThe Audit Committee assists the Board in the oversight and monitoring of cybersecurity matters. The Audit Committee regularly reviews and discusses the Company\u2019s cybersecurity risks with management, including the Company\u2019s Head of Corporate Information Security, its General Counsel and the Heads of Compliance and Business Conduct, Business Assurance, and Internal Audit, and receives updates, as necessary, regarding cybersecurity incidents. The Chair of the Audit Committee regularly reports the substance of such reviews and discussions to the Board, as necessary, and recommends to the Board such actions as the Audit Committee deems appropriate.\n\nFor a discussion of the Company\u2019s cybersecurity-related risks, see Item 1A of this Form 10-K under the heading \u201cRisk Factors.\u201d"
+            ]
+        },
+        {
+            "input": "Who is the Chief Financial Officer (CFO) of Apple?",
+            "actual_output": "I am sorry, I do not have access to information about the CFO. I can provide financial data from the 10-K.\n",
+            "expected_output": "Kevan Parekh ",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 0.5,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.50 because the presence of irrelevant statements detracts from the answer's focus, but it still attempts to address the prompt.",
+                    "success": false
+                },
+                "Contextual Precision": {
+                    "score": 0.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.00 because all nodes in the retrieval contexts are irrelevant. The first node discusses 'cybersecurity risks', the second node discusses 'legal and regulatory compliance risks', the third node discusses 'risk factors', the fourth node discusses 'general risks related to the company's stock price', the fifth node says 'Services', the sixth node is labeled 'Exhibit 31.1', the seventh node is labeled '# PART III', and the eighth node is labeled 'Exhibit 31.2'. All of these are irrelevant to identifying the CFO.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# Item 1C. Cybersecurity\n\nThe Company\u2019s management, led by its Head of Corporate Information Security, has overall responsibility for identifying, assessing and managing any material risks from cybersecurity threats. The Company\u2019s Head of Corporate Information Security leads a dedicated Information Security team of highly skilled individuals with experience across industries that, among other things, develops and distributes information security policies, standards and procedures; engages in employee cybersecurity training; implements security controls; assesses security risk and compliance posture; monitors and responds to security events; and executes security testing and assessments. The Company\u2019s Head of Corporate Information Security has extensive knowledge and skills gained from over 25 years of experience in the cybersecurity industry, including serving in leadership positions at other large technology companies and leading the Company\u2019s Information Security team since 2016.\n\nThe Company\u2019s Information Security team coordinates with teams across the Company to prevent, respond to and manage security incidents, and engages third parties, as appropriate, to assess, test or otherwise assist with aspects of its security processes and incident response. A dedicated Supplier Trust team manages information security risks the Company is exposed to through its supplier relationships. The Company has processes to log, track, address, and escalate for further assessment and report, as appropriate, cybersecurity incidents across the Company and its suppliers to senior management and the Audit and Finance Committee (\u201cAudit Committee\u201d) of the Board. The Company\u2019s enterprise risk management program is designed to identify, assess, and monitor the Company\u2019s business risks, including financial, operational, compliance and reputational risks, and reflects management\u2019s assessment of cybersecurity risks.\n\nThe Audit Committee assists the Board in the oversight and monitoring of cybersecurity matters. The Audit Committee regularly reviews and discusses the Company\u2019s cybersecurity risks with management, including the Company\u2019s Head of Corporate Information Security, its General Counsel and the Heads of Compliance and Business Conduct, Business Assurance, and Internal Audit, and receives updates, as necessary, regarding cybersecurity incidents. The Chair of the Audit Committee regularly reports the substance of such reviews and discussions to the Board, as necessary, and recommends to the Board such actions as the Audit Committee deems appropriate.\n\nFor a discussion of the Company\u2019s cybersecurity-related risks, see Item 1A of this Form 10-K under the heading \u201cRisk Factors.\u201d"
+            ]
+        },
+        {
+            "input": "Identify the Chief Executive Officer of the Company.",
+            "actual_output": "The 10-K states that information regarding executive officers will be included in the Company's definitive proxy statement to be filed with the SEC within 120 days after September 27, 2025. I am unable to identify the Chief Executive Officer from the 10-K.\n",
+            "expected_output": "Timothy D. Cook ",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 0.6666666666666666,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.67 because the inclusion of the proxy statement filing date detracts from the core task of identifying the CEO, but the CEO was still identified.",
+                    "success": false
+                },
+                "Contextual Precision": {
+                    "score": 0.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.00 because all nodes in the retrieval contexts are irrelevant to the input question. The first node refers to 'Directors, Executive Officers and Corporate Governance' being included in a proxy statement, but 'doesn't directly name the CEO'. The second node refers to 'Executive Compensation' information being included in a proxy statement, but 'doesn't directly name the CEO'. The third node is too general as the term is 'Services'. The fourth, fifth, sixth, seventh, and eighth nodes are generic exhibit numbers and 'doesn't provide any specific information about the CEO'.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# Item 10. Directors, Executive Officers and Corporate Governance\n\nThe information required by this Item will be included in the Company\u2019s definitive proxy statement to be filed with the SEC within 120 days after September 27, 2025, in connection with the solicitation of proxies for the Company\u2019s 2026 annual meeting of shareholders (\u201c2026 Proxy Statement\u201d), and is incorporated herein by reference."
+            ]
+        },
+        {
+            "input": "What is the potential maximum fine for a violation of the Digital Markets Act (DMA)?",
+            "actual_output": "I am unable to provide the potential maximum fine for a violation of the Digital Markets Act (DMA) from the 10-K filing. This is a legal question, and I am focused on financial data.\n",
+            "expected_output": "Up to 10% of annual worldwide net sales ",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 0.3333333333333333,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.33 because the response focuses on the AI's limitations and the legal nature of the question rather than directly addressing the potential maximum fine for a DMA violation.",
+                    "success": false
+                },
+                "Contextual Precision": {
+                    "score": 0.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.00 because all nodes in the retrieval contexts are irrelevant. The first node is irrelevant because \"This document discusses information related to directors, executive officers, and corporate governance, which is irrelevant to the question about the Digital Markets Act (DMA) and potential fines.\" The second node is irrelevant because \"This document discusses executive compensation, which is irrelevant to the question about the Digital Markets Act (DMA) and potential fines.\" The third node is irrelevant because \"The term 'Services' is too general and does not provide any information related to the Digital Markets Act (DMA) or potential fines.\" The fourth, fifth, sixth, seventh, and eighth nodes are irrelevant because they are generic exhibit numbers and do not provide information related to the Digital Markets Act (DMA) or potential fines.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# Item 10. Directors, Executive Officers and Corporate Governance\n\nThe information required by this Item will be included in the Company\u2019s definitive proxy statement to be filed with the SEC within 120 days after September 27, 2025, in connection with the solicitation of proxies for the Company\u2019s 2026 annual meeting of shareholders (\u201c2026 Proxy Statement\u201d), and is incorporated herein by reference."
+            ]
+        },
+        {
+            "input": "State the total 'Accounts receivable, net' for 2025.",
+            "actual_output": "I am unable to find the balance of 'Accounts receivable, net' on the Consolidated Balance Sheets. Since I am unable to locate the value after multiple attempts, I will report that I am unable to find it.\n\nI am unable to locate the 'Accounts receivable, net' balance on the Consolidated Balance Sheets for 2025.\n",
+            "expected_output": "$39,777 Million ",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the output is perfectly relevant and addresses the prompt directly.",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.00 because all nodes in the retrieval contexts are irrelevant. The first node discusses 'Cash, cash equivalents, and restricted cash and cash equivalents' and their ending balances, the second node discusses 'Liquidity and Capital Resources', the third node defines 'Cash Equivalents', the fourth node discusses the increase or decrease in 'cash, cash equivalents, and restricted cash and cash equivalents', the fifth node provides a table with 'Cash, cash equivalents, and restricted cash and cash equivalents, beginning balances', the sixth node discusses 'Derivative Instruments', the seventh node discusses 'Derivative Instruments and Hedging', and the eighth node mentions 'CONSOLIDATED STATEMENTS OF CASH FLOWS'. All of these are not related to 'Accounts receivable, net'.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# Cash, cash equivalents, and restricted cash and cash equivalents, ending balances\n\n|   |   | $35,934 | $29,943 | $30,737 |\n| - | - | ------- | ------- | ------- |"
+            ]
+        },
+        {
+            "input": "What was the total liabilities reported for 2025?",
+            "actual_output": "The Total Liabilities reported for 2025 is $285,508 Million, according to the Consolidated Balance Sheets.\n",
+            "expected_output": "$285,508 Million ",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response perfectly answers the question with no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because all nodes containing information about total liabilities for 2025 were ranked higher than nodes that, according to their 'reason', such as the second node which \"provides a breakdown of 'Other Current Liabilities' but does not directly provide the total liabilities for 2025.\", the third node which \"mentions derivative assets and liabilities but does not provide the total liabilities for 2025.\", the fourth node which \"discusses lease-related assets and liabilities but does not provide the total liabilities for 2025.\", the fifth node which \"discusses lease liability maturities but does not provide the total liabilities for 2025.\", the sixth node which \"discusses unconditional purchase obligations but does not provide the total liabilities for 2025.\", the seventh node which \"discusses liquidity and capital resources but does not provide the total liabilities for 2025.\", and the eighth node which \"is an introduction to the Management's Discussion and Analysis and does not contain the specific figure for total liabilities in 2025.\"",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# CONSOLIDATED BALANCE SHEETS\n\n(In millions, except number of shares, which are reflected in thousands, and par value)\n\n|                                                                                                                                                                      | September 27, 2025 | September 28, 2024 |\n| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | ------------------ |\n| **ASSETS:**                                                                                                                                                          |                    |                    |\n| **Current assets:**                                                                                                                                                  |                    |                    |\n| Cash and cash equivalents                                                                                                                                            | $ 35,934           | $ 29,943           |\n| Marketable securities                                                                                                                                                | 18,763             | 35,228             |\n| Accounts receivable, net                                                                                                                                             | 39,777             | 33,410             |\n| Vendor non-trade receivables                                                                                                                                         | 33,180             | 32,833             |\n| Inventories                                                                                                                                                          | 5,718              | 7,286              |\n| Other current assets                                                                                                                                                 | 14,585             | 14,287             |\n| **Total current assets**                                                                                                                                             | **147,957**        | **152,987**        |\n| **Non-current assets:**                                                                                                                                              |                    |                    |\n| Marketable securities                                                                                                                                                | 77,723             | 91,479             |\n| Property, plant and equipment, net                                                                                                                                   | 49,834             | 45,680             |\n| Other non-current assets                                                                                                                                             | 83,727             | 74,834             |\n| **Total non-current assets**                                                                                                                                         | **211,284**        | **211,993**        |\n| **Total assets**                                                                                                                                                     | **$ 359,241**      | **$ 364,980**      |\n| **LIABILITIES AND SHAREHOLDERS\u2019 EQUITY:**                                                                                                                            |                    |                    |\n| **Current liabilities:**                                                                                                                                             |                    |                    |\n| Accounts payable                                                                                                                                                     | $ 69,860           | $ 68,960           |\n| Other current liabilities                                                                                                                                            | 66,387             | 78,304             |\n| Deferred revenue                                                                                                                                                     | 9,055              | 8,249              |\n| Commercial paper                                                                                                                                                     | 7,979              | 9,967              |\n| Term debt                                                                                                                                                            | 12,350             | 10,912             |\n| **Total current liabilities**                                                                                                                                        | **165,631**        | **176,392**        |\n| **Non-current liabilities:**                                                                                                                                         |                    |                    |\n| Term debt                                                                                                                                                            | 78,328             | 85,750             |\n| Other non-current liabilities                                                                                                                                        | 41,549             | 45,888             |\n| **Total non-current liabilities**                                                                                                                                    | **119,877**        | **131,638**        |\n| **Total liabilities**                                                                                                                                                | **285,508**        | **308,030**        |\n| Commitments and contingencies                                                                                                                                        |                    |                    |\n| **Shareholders\u2019 equity:**                                                                                                                                            |                    |                    |\n| Common stock and additional paid-in capital, $0.00001 par value: 50,400,000 shares authorized; 14,773,260 and 15,116,786 shares issued and outstanding, respectively | 93,568             | 83,276             |\n| Accumulated deficit                                                                                                                                                  | (14,264)           | (19,154)           |\n| Accumulated other comprehensive loss                                                                                                                                 | (5,571)            | (7,172)            |\n| **Total shareholders\u2019 equity**                                                                                                                                       | **73,733**         | **56,950**         |\n| **Total liabilities and shareholders\u2019 equity**                                                                                                                       | **$ 359,241**      | **$ 364,980**      |\n\nSee accompanying Notes to Consolidated Financial Statements.\n\nApple Inc. | 2025 Form 10-K | 31"
+            ]
+        },
+        {
+            "input": "Identify the 'Other non-current liabilities' balance for 2025.",
+            "actual_output": "The total Other non-current liabilities is $11,603 million. The calculation is $10,911 million (Operating Leases) + $692 million (Finance Leases).\n\nThe Other non-current liabilities for 2025 is $11,603 Million.\n",
+            "expected_output": "$41,549 Million ",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there were no irrelevant statements, indicating a perfectly relevant response! Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.8095238095238094,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.81 because while the first two nodes are relevant, the third node discusses 'liquidity and capital resources, which are not directly related to \\'Other non-current liabilities\\'' and should ideally be ranked lower. Similarly, the fourth node discusses 'debt, which is a type of liability, but not specifically \\'Other non-current liabilities\\'' and the fifth node 'presents the consolidated statements of operations, which focus on revenues, expenses, and income, not balance sheet items like \\'Other non-current liabilities\\''. The sixth node discusses a specific liability, not the general category. The seventh node is relevant, but the eighth node provides information about cash balances, which is not directly related to the requested information.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# (1) All financial statements\n\n| Index to Consolidated Financial Statements                                                                                        | Page |\n| --------------------------------------------------------------------------------------------------------------------------------- | ---- |\n| Consolidated Statements of Operations for the years ended September 27, 2025, September 28, 2024 and September 30, 2023           | 29   |\n| Consolidated Statements of Comprehensive Income for the years ended September 27, 2025, September 28, 2024 and September 30, 2023 | 30   |\n| Consolidated Balance Sheets as of September 27, 2025 and September 28, 2024                                                       | 31   |\n| Consolidated Statements of Shareholders\u2019 Equity for the years ended September 27, 2025, September 28, 2024 and September 30, 2023 | 32   |\n| Consolidated Statements of Cash Flows for the years ended September 27, 2025, September 28, 2024 and September 30, 2023           | 33   |\n| Notes to Consolidated Financial Statements                                                                                        | 34   |\n| Reports of Independent Registered Public Accounting Firm\\*                                                                        | 49   |\n\n* Ernst &#x26; Young LLP, PCAOB Firm ID No. 00042."
+            ]
+        },
+        {
+            "input": "What was the quarterly cash dividend per share declared in May 2025?",
+            "actual_output": "The estimated quarterly dividend per share declared in May 2025 is $0.26.\n",
+            "expected_output": "$0.26 per share ",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.00 because all nodes in the retrieval contexts are irrelevant. The first node states \"This document states '# 14,776,353,000 shares of common stock were issued and outstanding as of October 17, 2025.', which is about the number of shares, but does not provide information about the dividend per share.\", the second node states \"This document provides information about the changes in shares of common stock for 2025, 2024 and 2023, but does not provide information about the dividend per share.\", the third node states \"This document discusses the share repurchase program, but does not provide information about the dividend per share.\", the fourth node states \"This document discusses the aggregate market value of the stock, but does not provide information about the dividend per share.\", the fifth node states \"This document states '# Holders\n\nAs of October 17, 2025, there were 22,429 shareholders of record.', which is about the number of shareholders, but does not provide information about the dividend per share.\", the sixth node states \"This document states '# Fully Paid and Nonassessable\n\nAll of the outstanding shares of the Company\u2019s Common Stock are fully paid and nonassessable.', which is about the shares, but does not provide information about the dividend per share.\", the seventh node states \"This document provides information about earnings per share, but does not provide information about the quarterly cash dividend per share declared in May 2025.\", and the eighth node states \"This document discusses the 2025 Notes, but does not provide information about the dividend per share.\".",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# 14,776,353,000 shares of common stock were issued and outstanding as of October 17, 2025."
+            ]
+        },
+        {
+            "input": "Identify the specific fine amount for the Commission Article 5(4) investigation.",
+            "actual_output": "I am sorry, but I cannot fulfill that request. I do not have the ability to search for specific legal case details or fine amounts.\n",
+            "expected_output": "\u20ac500 million ",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 0.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.00 because the response explicitly states the AI's inability to search for specific legal case details or fine amounts, rendering it unable to fulfill the request.",
+                    "success": false
+                },
+                "Contextual Precision": {
+                    "score": 0.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.00 because all nodes in the retrieval contexts are irrelevant. The first node is irrelevant because \"This document is an index of financial statements and does not contain information about fines or investigations.\" The second node is irrelevant because \"This document describes the company's consolidated financial statement details but does not mention any fines or investigations related to Commission Article 5(4).\" The third node is irrelevant because \"This document discusses the company's liquidity and capital resources, but it does not contain information about fines or investigations related to Commission Article 5(4).\" The fourth node is irrelevant because \"This document discusses the company's debt but does not mention any fines or investigations related to Commission Article 5(4).\" The fifth node is irrelevant because \"This document presents the consolidated statements of operations but does not mention any fines or investigations related to Commission Article 5(4).\" The sixth node is irrelevant because \"This document discusses the deemed repatriation tax payable but does not mention any fines or investigations related to Commission Article 5(4).\" The seventh node is irrelevant because \"This document discusses lease-related assets and liabilities but does not mention any fines or investigations related to Commission Article 5(4).\" The eighth node is irrelevant because \"This document shows cash, cash equivalents, and restricted cash but does not mention any fines or investigations related to Commission Article 5(4).\"",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# (1) All financial statements\n\n| Index to Consolidated Financial Statements                                                                                        | Page |\n| --------------------------------------------------------------------------------------------------------------------------------- | ---- |\n| Consolidated Statements of Operations for the years ended September 27, 2025, September 28, 2024 and September 30, 2023           | 29   |\n| Consolidated Statements of Comprehensive Income for the years ended September 27, 2025, September 28, 2024 and September 30, 2023 | 30   |\n| Consolidated Balance Sheets as of September 27, 2025 and September 28, 2024                                                       | 31   |\n| Consolidated Statements of Shareholders\u2019 Equity for the years ended September 27, 2025, September 28, 2024 and September 30, 2023 | 32   |\n| Consolidated Statements of Cash Flows for the years ended September 27, 2025, September 28, 2024 and September 30, 2023           | 33   |\n| Notes to Consolidated Financial Statements                                                                                        | 34   |\n| Reports of Independent Registered Public Accounting Firm\\*                                                                        | 49   |\n\n* Ernst &#x26; Young LLP, PCAOB Firm ID No. 00042."
+            ]
+        },
+        {
+            "input": "Identify the total 'Unrecognized compensation cost' related to RSUs as of September 2025.",
+            "actual_output": "The total unrecognized compensation cost related to outstanding RSUs as of September 27, 2025, was $21,800 Million.\n",
+            "expected_output": "$21.8 Billion ",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response perfectly answers the question without irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.5,
+                    "threshold": 0.7,
+                    "reason": "The contextual precision score is 0.50 because the first node is irrelevant, as it 'does not provide the specific dollar amount requested', while the second node directly answers the question. Therefore, an irrelevant node is ranked higher than a relevant node.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# Share-Based Compensation\n\nThe Company recognizes share-based compensation expense on a straight-line basis for its estimate of equity awards that will ultimately vest."
+            ]
+        },
+        {
+            "input": "What was the aggregate market value of stock held by non-affiliates as of March 28, 2025?",
+            "actual_output": "I am sorry, I cannot fulfill this request. The document focuses on the fiscal year ending September 27, 2025, and does not contain information about the aggregate market value of stock held by non-affiliates as of March 28, 2025.\n",
+            "expected_output": "$3,253,431,000,000 ",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response perfectly answers the question without irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.0 because all nodes in the retrieval contexts are irrelevant. The first node 'discusses share-based compensation but does not provide information about the aggregate market value of stock held by non-affiliates.', the second node 'discusses share-based compensation expense but does not provide information about the aggregate market value of stock held by non-affiliates.', the third node 'provides financial data, including net income and share-based compensation, but it does not contain information about the aggregate market value of stock held by non-affiliates.', the fourth node 'discusses earnings per share but does not provide information about the aggregate market value of stock held by non-affiliates.', the fifth node 'discusses earnings per share calculations but does not provide information about the aggregate market value of stock held by non-affiliates.', the sixth node 'discusses error corrections and incentive-based compensation but does not provide information about the aggregate market value of stock held by non-affiliates.', the seventh node 'discusses financing activities but does not provide information about the aggregate market value of stock held by non-affiliates.', and the eighth node 'discusses other current liabilities but does not provide information about the aggregate market value of stock held by non-affiliates.' are all irrelevant to the input question.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# Share-Based Compensation\n\nThe Company recognizes share-based compensation expense on a straight-line basis for its estimate of equity awards that will ultimately vest."
+            ]
+        }
+    ]
+}

@@ -15,7 +15,7 @@ tiktoken>=0.5.0
 beautifulsoup4>=4.12.0
 
 # --- New Agentic RAG Dependencies ---
-google-genai       # Latest Gemini 2.0 SDK
+google-genai       # Latest Gemini 3.0 SDK
 llama-parse        # High-fidelity PDF parsing
 llama-index        # Required for MarkdownNodeParser
 python-dotenv      # For secure .env key loading

@@ -1,0 +1,155 @@
+{
+    "summary": {
+        "total_tests": 5,
+        "passed": 2,
+        "failed": 3,
+        "timestamp": "2026-01-12 13:03:18.731095"
+    },
+    "detailed_results": [
+        {
+            "input": "How much revenue did Services generate in 2025?",
+            "actual_output": "The revenue that Services generated in 2025 is $109,158 Million, according to the Consolidated Statements of Operations.",
+            "expected_output": "$109,158 Million",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response perfectly answers the question without irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because all relevant nodes are ranked higher than irrelevant nodes. The first node contains a table that directly answers the question, while the second node is about 'Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations' and does not contain the answer. The third node is an index, the fourth node does not break down revenue by 'Services', the fifth node refers to 'consolidated financial statement details', the sixth node discusses 'Services Gross Margin', the seventh node discusses 'Operating Expenses', and the eighth node provides a breakdown of net sales and costs by geographic region. All these reasons explain why the nodes are irrelevant and ranked lower.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# CONSOLIDATED STATEMENTS OF OPERATIONS\n\n(In millions, except number of shares, which are reflected in thousands, and per-share amounts)\n\n|                                          | Years ended                         | September 27, 2025 | September 28, 2024 | September 30, 2023 |\n| ---------------------------------------- | ----------------------------------- | ------------------ | ------------------ | ------------------ |\n| Net sales:                               | Products                            | $307,003           | $294,866           | $298,085           |\n|                                          | Services                            | $109,158           | $96,169            | $85,200            |\n|                                          | Total net sales                     | $416,161           | $391,035           | $383,285           |\n| Cost of sales:                           | Products                            | $194,116           | $185,233           | $189,282           |\n|                                          | Services                            | $26,844            | $25,119            | $24,855            |\n|                                          | Total cost of sales                 | $220,960           | $210,352           | $214,137           |\n|                                          | Gross margin                        | $195,201           | $180,683           | $169,148           |\n| Operating expenses:                      | Research and development            | $34,550            | $31,370            | $29,915            |\n|                                          | Selling, general and administrative | $27,601            | $26,097            | $24,932            |\n|                                          | Total operating expenses            | $62,151            | $57,467            | $54,847            |\n| Operating income                         |                                     | $133,050           | $123,216           | $114,301           |\n| Other income/(expense), net              |                                     | ($321)             | $269               | ($565)             |\n| Income before provision for income taxes |                                     | $132,729           | $123,485           | $113,736           |\n| Provision for income taxes               |                                     | $20,719            | $29,749            | $16,741            |\n| Net income                               |                                     | $112,010           | $93,736            | $96,995            |"
+            ]
+        },
+        {
+            "input": "What was the net sales figure for Mac in 2025?",
+            "actual_output": "The net sales for Mac in 2025 was $33,708 Million.\n",
+            "expected_output": "$33,708 Million",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response perfectly answers the question with no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.41666666666666663,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.42 because the first node in the retrieval contexts, which states that \"This context mentions that 'Mac net sales increased during 2025 compared to 2024', which is related to the question, but it doesn't provide the specific net sales figure\", is not as relevant as the second node, which provides the answer. Similarly, the third, fourth, fifth, seventh and eighth nodes are also less relevant because they don't provide the specific net sales figure for Mac, but are ranked higher than the sixth node which provides the answer.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# Mac\n\nMac net sales increased during 2025 compared to 2024 primarily due to higher net sales of laptops and desktops."
+            ]
+        },
+        {
+            "input": "What were the net sales for iPhone in 2025?",
+            "actual_output": "The net sales for iPhone in 2025 were $209,586 Million, according to the table of disaggregated net sales.",
+            "expected_output": "$209,586 Million",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there were no irrelevant statements, indicating a perfectly relevant response! Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.00 because all nodes in the retrieval contexts are irrelevant. The first node is irrelevant because, according to its 'reason', \"This document provides a table showing net sales by reportable segment for 2025, 2024 and 2023 in millions of dollars. However, it does not specifically mention iPhone sales.\" The second node is irrelevant because, according to its 'reason', \"This document provides net sales for U.S., China, and other countries, but it doesn't break down sales by product like iPhone.\" The third node is irrelevant because, according to its 'reason', \"This document provides information about earnings per share, net income, and shares outstanding, but it does not contain any information about iPhone sales.\" The fourth node is irrelevant because, according to its 'reason', \"This document provides consolidated statements of operations, including total net sales, but it does not break down sales by product like iPhone.\" The fifth node is irrelevant because, according to its 'reason', \"This document provides a breakdown of net sales by geographic region, but it does not provide information about iPhone sales.\" The sixth node is irrelevant because, according to its 'reason', \"This document provides a breakdown of net sales by geographic region for 2024, but it does not provide information about iPhone sales.\" The seventh node is irrelevant because, according to its 'reason', \"This document provides information about operating expenses, but it does not contain any information about iPhone sales.\" The eighth node is irrelevant because, according to its 'reason', \"This document is an exhibit reference and does not contain any financial data.\"",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# Segment Operating Performance\n\nThe following table shows net sales by reportable segment for 2025, 2024 and 2023 (dollars in millions):\n\n|                      | 2025      | Change | 2024      | Change | 2023      |\n| -------------------- | --------- | ------ | --------- | ------ | --------- |\n| Americas             | $ 178,353 | 7 %    | $ 167,045 | 3 %    | $ 162,560 |\n| Europe               | $ 111,032 | 10 %   | $ 101,328 | 7 %    | $ 94,294  |\n| Greater China        | $ 64,377  | (4)%   | $ 66,952  | (8)%   | $ 72,559  |\n| Japan                | $ 28,703  | 15 %   | $ 25,052  | 3 %    | $ 24,257  |\n| Rest of Asia Pacific | $ 33,696  | 10 %   | $ 30,658  | 4 %    | $ 29,615  |\n| Total net sales      | $ 416,161 | 6 %    | $ 391,035 | 2 %    | $ 383,285 |"
+            ]
+        },
+        {
+            "input": "Identify the net sales for iPad in 2025.",
+            "actual_output": "The net sales for iPad in 2025 is $28,023 Million, according to the \"Products and Services Performance\" table.",
+            "expected_output": "$28,023 Million",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there were no irrelevant statements.",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because all the nodes containing irrelevant information such as 'net sales by reportable segment, not by product like iPad' in the second node, 'markets and distribution channels but does not provide specific net sales figures for iPad' in the third node, 'Wearables, Home and Accessories net sales, not iPad sales' in the fourth node, 'Services gross margin, not iPad net sales' in the fifth node, 'overall gross margin and services gross margin, not iPad net sales' in the sixth node, 'products gross margin, not iPad net sales' in the seventh node, and 'product announcements but does not provide specific net sales figures for iPad' in the eighth node are ranked lower than the relevant node.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "Products and Services Performance\n\nThe following table shows net sales by category for 2025, 2024 and 2023 (dollars in millions):\n\n|                                 | 2025      | Change | 2024      | Change | 2023      |\n| ------------------------------- | --------- | ------ | --------- | ------ | --------- |\n| iPhone                          | $ 209,586 | 4 %    | $ 201,183 | \u2014 %    | $ 200,583 |\n| Mac                             | $ 33,708  | 12 %   | $ 29,984  | 2 %    | $ 29,357  |\n| iPad                            | $ 28,023  | 5 %    | $ 26,694  | (6)%   | $ 28,300  |\n| Wearables, Home and Accessories | $ 35,686  | (4)%   | $ 37,005  | (7)%   | $ 39,845  |\n| Services (1)                    | $ 109,158 | 14 %   | $ 96,169  | 13 %   | $ 85,200  |\n| Total net sales                 | $ 416,161 | 6 %    | $ 391,035 | 2 %    | $ 383,285 |\n\n(1) Services net sales include amortization of the deferred value of services bundled in the sales price of certain products."
+            ]
+        },
+        {
+            "input": "What was the revenue for 'Wearables, Home and Accessories' in 2025?",
+            "actual_output": "The revenue for 'Wearables, Home and Accessories' in 2025 is $35,686 Million.\n",
+            "expected_output": "$35,686 Million",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response perfectly answers the question with no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.25,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.25 because the first three nodes are irrelevant as 'it doesn't provide the revenue figure', 'does not provide any revenue figures', and 'does not provide any revenue figures'. The fourth node is relevant because 'it contains a table showing net sales by category for 2025, 2024 and 2023'. The irrelevant nodes should have been ranked lower.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# Wearables, Home and Accessories\n\nWearables, Home and Accessories net sales decreased during 2025 compared to 2024 primarily due to lower net sales of Accessories and Wearables."
+            ]
+        }
+    ]
+}

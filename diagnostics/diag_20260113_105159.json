@@ -1,0 +1,39 @@
+{
+    "summary": {
+        "total_tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "timestamp": "2026-01-13 10:51:59.840026"
+    },
+    "detailed_results": [
+        {
+            "input": "What was Apple's total net sales for the fiscal year ended September 27, 2025?",
+            "actual_output": "The total net sales for the fiscal year ended September 27, 2025 is $416,161 Million.",
+            "expected_output": "$416,161 Million [cite: 657, 793]",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the output is perfectly faithful to the provided context. Excellent work, all claims are fully supported by the source material!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response was perfectly relevant, directly answering the user's specific financial query without any extraneous information. Excellent work in maintaining focus on the requested data.",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.8541666666666666,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.85 because the first two nodes in the retrieval contexts are highly relevant, directly providing the 'Total net sales' for '2025' as '$ 416,161'. The score is not perfect because the third node is irrelevant as it \"details 'Operating Expenses' and only mentions 'total net sales' as a denominator for percentage calculations, without stating the actual value,\" and is ranked higher than the fourth and sixth nodes which are relevant and provide the correct answer.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# Net Sales\n\n|                 | 2025      | 2024      | 2023      |\n| --------------- | --------- | --------- | --------- |\n| U.S.            | $ 151,790 | $ 142,196 | $ 138,573 |\n| China (1)       | $ 64,377  | $ 66,952  | $ 72,559  |\n| Other countries | $ 199,994 | $ 181,887 | $ 172,153 |\n| Total net sales | $ 416,161 | $ 391,035 | $ 383,285 |"
+            ]
+        }
+    ]
+}

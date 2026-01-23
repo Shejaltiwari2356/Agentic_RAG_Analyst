@@ -6,8 +6,8 @@ data:
   pdf_path: "data/raw/apple_10k.pdf" # Path to your Apple 10-K
 
 chunking:
-  chunk_size: 6000
-  chunk_overlap: 800
+  chunk_size: 11000  # Max Table (9059) + 2000 Buffer for Headers/Footnotes
+  chunk_overlap: 1500 # Increased to ensure "Year" headers carry over
 
 embedding:
   collection_name: "apple_10k_agentic_v1"

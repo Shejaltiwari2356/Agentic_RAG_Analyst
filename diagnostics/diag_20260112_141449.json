@@ -1,0 +1,300 @@
+{
+    "summary": {
+        "total_tests": 10,
+        "passed": 4,
+        "failed": 6,
+        "timestamp": "2026-01-12 14:14:49.500734"
+    },
+    "detailed_results": [
+        {
+            "input": "Where is Apple's principal executive office located?",
+            "actual_output": "Apple's principal executive office is located at One Apple Park Way, Cupertino, California 95014.",
+            "expected_output": "One Apple Park Way, Cupertino, California [cite: 18]",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because all the relevant nodes are ranked higher than the irrelevant nodes. The first node provides the exact address, while the second node is irrelevant as it only mentions '# Washington, D.C. 20549', the third node is irrelevant as it only mentions 'Services', the fourth node is somewhat relevant as it mentions '# California' but doesn't provide the full address, and the fifth, sixth, seventh, and eighth nodes are irrelevant as they only mention '# PART I', '# PART III', '# PART IV', and '# PART II' respectively.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# One Apple Park Way\n\nCupertino, California 95014\n\n(Address of principal executive offices) (Zip Code)\n\n(408) 996-1010\n\n(Registrant\u2019s telephone number, including area code)"
+            ]
+        },
+        {
+            "input": "How many full-time equivalent employees did Apple have in 2025?",
+            "actual_output": "Apple had 166,000 full-time equivalent employees in 2025.\n",
+            "expected_output": "166,000 [cite: 175]",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there were no irrelevant statements.",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.00 because all nodes in the retrieval contexts are irrelevant. The first node's reason states that \"The document title 'Services' does not provide any information about the number of full-time equivalent employees at Apple in 2025.\", and subsequent nodes similarly lack the requested information, indicating that relevant nodes were not prioritized.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "Services"
+            ]
+        },
+        {
+            "input": "What is the trading symbol for Apple common stock?",
+            "actual_output": "I am an auditor, and do not have access to that information. I can only access financial data.",
+            "expected_output": "AAPL [cite: 24, 586]",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 0.3333333333333333,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.33 because the AI includes information beyond the provided financial data, such as the address and telephone number, which contradicts the instruction to focus solely on financial information.",
+                    "success": false
+                },
+                "Answer Relevancy": {
+                    "score": 0.6666666666666666,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.67 because the response included an irrelevant statement about the AI's role, but it did correctly identify Apple's trading symbol.",
+                    "success": false
+                },
+                "Contextual Precision": {
+                    "score": 0.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.00 because all nodes in the retrieval contexts are irrelevant to the input question. The first node 'provides the address and phone number of Apple, but does not mention the trading symbol for Apple common stock', the second node contains '# Washington, D.C. 20549', the third node contains 'Services', the fourth node contains '# California (State or other jurisdiction of incorporation or organization) 94-2404110 (I.R.S. Employer Identification No.)', the fifth node contains '# PART I', the sixth node contains '# PART III', the seventh node contains '# PART IV', and the eighth node contains '# PART II', none of which address the trading symbol of Apple stock.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# One Apple Park Way\n\nCupertino, California 95014\n\n(Address of principal executive offices) (Zip Code)\n\n(408) 996-1010\n\n(Registrant\u2019s telephone number, including area code)"
+            ]
+        },
+        {
+            "input": "Who is the Chief Executive Officer?",
+            "actual_output": "The information about the Chief Executive Officer is included in the Company\u2019s definitive proxy statement and is incorporated herein by reference.",
+            "expected_output": "Timothy D. Cook [cite: 1242]",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and complete!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.00 because all nodes in the retrieval contexts are irrelevant. The first node mentions 'Executive Officers' but does not name the Chief Executive Officer, the second node mentions 'Executive Compensation' but does not name the Chief Executive Officer, the third node is titled 'Services' and does not name the Chief Executive Officer, the fourth node is titled 'Exhibit 31.2' and does not name the Chief Executive Officer, the fifth node is titled 'Exhibit 31.1' and does not name the Chief Executive Officer, the sixth node is titled 'Exhibit 23.1' and does not name the Chief Executive Officer, the seventh node is titled 'Exhibit 21.1' and does not name the Chief Executive Officer, and the eighth node is titled 'Exhibit 32.1' and does not name the Chief Executive Officer.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# Item 10. Directors, Executive Officers and Corporate Governance\n\nThe information required by this Item will be included in the Company\u2019s definitive proxy statement to be filed with the SEC within 120 days after September 27, 2025, in connection with the solicitation of proxies for the Company\u2019s 2026 annual meeting of shareholders (\u201c2026 Proxy Statement\u201d), and is incorporated herein by reference."
+            ]
+        },
+        {
+            "input": "Who is the Chief Financial Officer (CFO)?",
+            "actual_output": "I am designed to provide financial data and analysis from the 10-K filings. I do not have access to executive names.",
+            "expected_output": "Kevan Parekh [cite: 1181, 1242]",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the output is perfectly relevant and addresses the input directly!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.00 because all nodes in the retrieval contexts are irrelevant. The first node is irrelevant because \"This document discusses directors, executive officers, and corporate governance, but doesn't mention the CFO's name.\" The second node is irrelevant because \"This document discusses executive compensation, but doesn't mention the CFO's name.\" The third node is irrelevant because \"The document labeled 'Services' does not provide any information about the CFO.\" The fourth node is irrelevant because \"The document labeled 'Exhibit 31.2' does not provide any information about the CFO.\" The fifth node is irrelevant because \"The document labeled 'Exhibit 31.1' does not provide any information about the CFO.\" The sixth node is irrelevant because \"The document labeled 'Exhibit 23.1' does not provide any information about the CFO.\" The seventh node is irrelevant because \"The document labeled 'Exhibit 21.1' does not provide any information about the CFO.\" The eighth node is irrelevant because \"The document labeled 'Exhibit 32.1' does not provide any information about the CFO.\"",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# Item 10. Directors, Executive Officers and Corporate Governance\n\nThe information required by this Item will be included in the Company\u2019s definitive proxy statement to be filed with the SEC within 120 days after September 27, 2025, in connection with the solicitation of proxies for the Company\u2019s 2026 annual meeting of shareholders (\u201c2026 Proxy Statement\u201d), and is incorporated herein by reference."
+            ]
+        },
+        {
+            "input": "How many shareholders of record were there on Oct 17, 2025?",
+            "actual_output": "As of October 17, 2025, there were 22,429 shareholders of record.",
+            "expected_output": "22,429 [cite: 588]",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and complete.",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because all irrelevant nodes are ranked lower than the relevant node. The first node directly answers the question, as it states: \"This document directly answers the question: 'As of October 17, 2025, there were 22,429 shareholders of record.'\", while the subsequent nodes do not.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# Holders\n\nAs of October 17, 2025, there were 22,429 shareholders of record."
+            ]
+        },
+        {
+            "input": "What was the quarterly dividend declared in May 2025?",
+            "actual_output": "I am unable to find the specific dividend declared in May 2025. The 10-K states that the Board of Directors declares dividends at its discretion. I cannot provide the dividend amount for May 2025.\n",
+            "expected_output": "$0.26 per share [cite: 733, 735]",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 0.6666666666666666,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.67 because the response includes irrelevant information about the general dividend declaration process, but it does attempt to address the dividend amount for May 2025.",
+                    "success": false
+                },
+                "Contextual Precision": {
+                    "score": 0.7678571428571428,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.77 because the third node, which 'does not mention anything about dividends', should ideally be ranked lower than the second node, which lists 'Payments for dividends and dividend equivalents'. Similarly, the fifth node, which discusses 'Share-Based Compensation', should be ranked lower than the sixth node, which lists 'Accrued distribution and marketing'. The fourth and eighth nodes also 'do not mention anything about dividends' or discuss 'Earnings per share' respectively, and should be ranked lower than the sixth and seventh nodes, which are potentially relevant.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# Dividends\n\nThe holders of shares of Common Stock are entitled to receive such dividends, if any, as may be declared from time to time by the Company\u2019s Board of Directors in its discretion from funds legally available therefor."
+            ]
+        },
+        {
+            "input": "When did Apple's fiscal year 2025 end?",
+            "actual_output": "Apple's fiscal year 2025 ended on September 27, 2025.",
+            "expected_output": "September 27, 2025 [cite: 6, 65]",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there were no irrelevant statements.",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.6488095238095237,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.65 because the second node, which 'discusses share repurchases during 2025, but does not explicitly state when the fiscal year ends', should have been ranked lower. Similarly, the fourth node, which 'provides information on shares of common stock for 2025, 2024, and 2023, but does not directly answer when the fiscal year 2025 ends', the fifth node, which 'provides the number of shares outstanding as of 'October 17, 2025', which is after the date provided in the expected output, but does not directly answer when the fiscal year 2025 ends', and the sixth node, which 'mentions 'March 28, 2025', which is the last business day of the Registrant\u2019s most recently completed second fiscal quarter, but does not directly answer when the fiscal year 2025 ends', should have been ranked lower. However, the first, third, seventh, and eighth nodes are relevant, which helps the score.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "Capital Return Program\n\nIn addition to its contractual cash requirements, the Company has an authorized share repurchase program. The program does not obligate the Company to acquire a minimum amount of shares. As of September 27, 2025, the Company\u2019s quarterly cash dividend was $0.26 per share. The Company intends to increase its dividend on an annual basis, subject to declaration by the Board.\n\nIn May 2025, the Company announced a new share repurchase program of up to $100 billion and raised its quarterly dividend from $0.25 to $0.26 per share beginning in May 2025. During 2025, the Company repurchased $89.3 billion of its common stock and paid dividends and dividend equivalents of $15.4 billion."
+            ]
+        },
+        {
+            "input": "What was the amount of the new share repurchase program authorized in May 2025?",
+            "actual_output": "The company announced a new share repurchase program of up to $100 billion in May 2025.",
+            "expected_output": "$100 billion [cite: 594, 735]",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response directly and accurately answers the question without any irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.0 because the first node directly answers the question with 'In May 2025, the Company announced a new share repurchase program of up to $100 billion', while all subsequent nodes are irrelevant. For example, the second node 'mentions the amount of shares repurchased during 2025, which is related to the share repurchase program, but it doesn't directly state the authorized amount of the new program announced in May 2025'.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "Capital Return Program\n\nIn addition to its contractual cash requirements, the Company has an authorized share repurchase program. The program does not obligate the Company to acquire a minimum amount of shares. As of September 27, 2025, the Company\u2019s quarterly cash dividend was $0.26 per share. The Company intends to increase its dividend on an annual basis, subject to declaration by the Board.\n\nIn May 2025, the Company announced a new share repurchase program of up to $100 billion and raised its quarterly dividend from $0.25 to $0.26 per share beginning in May 2025. During 2025, the Company repurchased $89.3 billion of its common stock and paid dividends and dividend equivalents of $15.4 billion."
+            ]
+        },
+        {
+            "input": "Identify the exchange where Apple's common stock is registered.",
+            "actual_output": "Apple's common stock is registered on The Nasdaq Stock Market LLC under the trading symbol \"AAPL.\"\n",
+            "expected_output": "The Nasdaq Stock Market LLC [cite: 24, 586]",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant statements. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.8541666666666666,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.85 because the third node, with the reason \"This document is an audit report and does not contain information about where Apple's stock is registered,\" should ideally be ranked lower. Similarly, the fifth node, with the reason 'This document describes where to find company reports but does not specify where the common stock is registered,' should also be ranked lower. The seventh node, with the reason \"This document lists subsidiaries of Apple Inc. and their locations, which is not relevant to where Apple's common stock is registered,\" and the eighth node, with the reason \"This document simply identifies the filing as Apple Inc.'s 2025 Form 10-K and doesn't provide information about stock registration,\" should also be ranked lower.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# DESCRIPTION OF THE REGISTRANT\u2019S SECURITIES REGISTERED PURSUANT TO SECTION 12 OF THE SECURITIES EXCHANGE ACT OF 1934\n\nAs of September 27, 2025, Apple Inc. (\u201cApple\u201d or the \u201cCompany\u201d) had eight classes of securities registered under Section 12 of the Securities Exchange Act of 1934, as amended (the \u201cExchange Act\u201d): (i) Common Stock, $0.00001 par value per share (\u201cCommon Stock\u201d); (ii) 0.000% Notes due 2025 (the \u201c2025 Notes\u201d); (iii) 1.625% Notes due 2026 (the \u201c2026 Notes\u201d); (iv) 2.000% Notes due 2027 (the \u201c2027 Notes\u201d); (v) 1.375% Notes due 2029 (the \u201c1.375% 2029 Notes\u201d); (vi) 3.050% Notes due 2029 (the \u201c3.050% 2029 Notes\u201d); (vii) 0.500% Notes due 2031 (the \u201c2031 Notes\u201d); and (viii) 3.600% Notes due 2042 (the \u201c2042 Notes,\u201d and together with the 2025 Notes, the 2026 Notes, the 2027 Notes, the 1.375% 2029 Notes, the 3.050% 2029 Notes, and the 2031 Notes, the \u201cNotes\u201d). Each of the Company\u2019s securities registered under Section 12 of the Exchange Act are listed on The Nasdaq Stock Market LLC."
+            ]
+        }
+    ]
+}

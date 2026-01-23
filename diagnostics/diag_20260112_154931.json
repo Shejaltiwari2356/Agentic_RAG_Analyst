@@ -1,0 +1,445 @@
+{
+    "summary": {
+        "total_tests": 15,
+        "passed": 3,
+        "failed": 12,
+        "timestamp": "2026-01-12 15:49:31.193160"
+    },
+    "detailed_results": [
+        {
+            "input": "What was the total value of 'Other non-current assets' in 2025?",
+            "actual_output": "The total value of Other non-current assets for 2025 is $83,727 Million.",
+            "expected_output": "$83,727 Million ",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 0.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.00 because the actual output incorrectly states the total value of Other non-current assets for 2025 as $83,727 Million, when it should be $83,727.",
+                    "success": false
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because all nodes that discuss irrelevant information such as 'Other current liabilities', 'other purchase obligations', 'Long-lived Assets', 'aggregate market value of stock', 'Debt', and 'The 2025 Notes' are ranked lower than the nodes that contain relevant information about 'Other non-current assets'.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# Other Non-Current Assets\n\n|                                | 2025     | 2024     |\n| ------------------------------ | -------- | -------- |\n| Deferred tax assets            | $ 20,777 | $ 19,499 |\n| Other non-current assets       | $ 62,950 | $ 55,335 |\n| Total other non-current assets | $ 83,727 | $ 74,834 |"
+            ]
+        },
+        {
+            "input": "What was the year-over-year growth percentage for Services in 2025?",
+            "actual_output": "The year-over-year growth percentage for Services in 2025 is 14%. This is based on the \"Products and Services Performance\" table found in the 10-K.\n",
+            "expected_output": "14% ",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.14285714285714285,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.14 because the first six nodes in the retrieval contexts are irrelevant, as indicated by reasons such as 'This document provides net sales by geographic segment but does not provide the year-over-year growth percentage for Services.' and 'This document describes the company's segments and how they are managed, but it does not provide any financial data or growth percentages.' These irrelevant nodes should have been ranked lower than the seventh node, which is relevant because 'This document contains the net sales for 'Services' for 2025 ($109,158 million) and 2024 ($96,169 million), which can be used to calculate the year-over-year growth.'",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# Segment Operating Performance\n\nThe following table shows net sales by reportable segment for 2025, 2024 and 2023 (dollars in millions):\n\n|                      | 2025      | Change | 2024      | Change | 2023      |\n| -------------------- | --------- | ------ | --------- | ------ | --------- |\n| Americas             | $ 178,353 | 7 %    | $ 167,045 | 3 %    | $ 162,560 |\n| Europe               | $ 111,032 | 10 %   | $ 101,328 | 7 %    | $ 94,294  |\n| Greater China        | $ 64,377  | (4)%   | $ 66,952  | (8)%   | $ 72,559  |\n| Japan                | $ 28,703  | 15 %   | $ 25,052  | 3 %    | $ 24,257  |\n| Rest of Asia Pacific | $ 33,696  | 10 %   | $ 30,658  | 4 %    | $ 29,615  |\n| Total net sales      | $ 416,161 | 6 %    | $ 391,035 | 2 %    | $ 383,285 |"
+            ]
+        },
+        {
+            "input": "How much did iPhone sales grow compared to 2024?",
+            "actual_output": "The iPhone sales grew by 4% compared to 2024. This is according to the \"Products and Services Performance\" table.",
+            "expected_output": "4% ",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there were no irrelevant statements.",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the first node contains the relevant information that 'iPhone sales grew by 4% compared to 2024', while the subsequent nodes are irrelevant as the second node is 'about AppleCare', the third node 'describes the iPhone product line but does not provide information on sales growth', and the remaining nodes simply state 'Apple Inc.'.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "Products and Services Performance\n\nThe following table shows net sales by category for 2025, 2024 and 2023 (dollars in millions):\n\n|                                 | 2025      | Change | 2024      | Change | 2023      |\n| ------------------------------- | --------- | ------ | --------- | ------ | --------- |\n| iPhone                          | $ 209,586 | 4 %    | $ 201,183 | \u2014 %    | $ 200,583 |\n| Mac                             | $ 33,708  | 12 %   | $ 29,984  | 2 %    | $ 29,357  |\n| iPad                            | $ 28,023  | 5 %    | $ 26,694  | (6)%   | $ 28,300  |\n| Wearables, Home and Accessories | $ 35,686  | (4)%   | $ 37,005  | (7)%   | $ 39,845  |\n| Services (1)                    | $ 109,158 | 14 %   | $ 96,169  | 13 %   | $ 85,200  |\n| Total net sales                 | $ 416,161 | 6 %    | $ 391,035 | 2 %    | $ 383,285 |\n\n(1) Services net sales include amortization of the deferred value of services bundled in the sales price of certain products."
+            ]
+        },
+        {
+            "input": "What is the trading symbol for Apple common stock?",
+            "actual_output": "The trading symbol for Apple common stock is AAPL.\n",
+            "expected_output": "AAPL ",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.5,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.50 because the first node is irrelevant as 'This context is about exhibits and filings, and does not contain information about the trading symbol for Apple stock.', while the second node directly answers the question by stating 'The Company\u2019s Common Stock is listed on The Nasdaq Stock Market LLC under the trading symbol \u201cAAPL.\u201d'. Therefore, an irrelevant node is ranked higher than a relevant node.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "Incorporated by Reference\n| Exhibit Number | Exhibit Description                                                                                                                                                                             | Form | Exhibit | Filing Date/Period End Date |\n| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- | ------- | --------------------------- |\n| 101\\*\\*        | Inline XBRL Document Set for the consolidated financial statements and accompanying notes in Part II, Item 8, \u201cFinancial Statements and Supplementary Data\u201d of this Annual Report on Form 10-K. |      |         |                             |\n| 104\\*\\*        | Inline XBRL for the cover page of this Annual Report on Form 10-K, included in the Exhibit 101 Inline XBRL Document Set.                                                                        |      |         |                             |\n\n* Indicates management contract or compensatory plan or arrangement.\n\n** Filed herewith.\n\n*** Furnished herewith.\n\n(1) Certain instruments defining the rights of holders of long-term debt securities of the Registrant are omitted pursuant to Item 601(b)(4)(iii) of Regulation S-K. The Registrant hereby undertakes to furnish to the SEC, upon request, copies of any such instruments."
+            ]
+        },
+        {
+            "input": "Mention specific cybersecurity threats identified as risks in the 10-K.",
+            "actual_output": "The 10-K identifies several cybersecurity threats as risks, including hacking, ransomware attacks, computer viruses, physical or electronic break-ins, and other cybersecurity incidents. The company also acknowledges the risk of employee error, malfeasance, system error, and faulty password management.",
+            "expected_output": "Ransomware, computer viruses, or unauthorized access ",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.41666666666666663,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.42 because the first and second nodes are irrelevant. The first node 'discusses the company's cybersecurity management and risk assessment processes but does not mention specific cybersecurity threats identified as risks in the 10-K', and the second node 'introduces risk factors but doesn't directly list specific cybersecurity threats'. These should have been ranked lower than the third and fourth nodes, which are relevant because they mention specific cybersecurity threats.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# Item 1C. Cybersecurity\n\nThe Company\u2019s management, led by its Head of Corporate Information Security, has overall responsibility for identifying, assessing and managing any material risks from cybersecurity threats. The Company\u2019s Head of Corporate Information Security leads a dedicated Information Security team of highly skilled individuals with experience across industries that, among other things, develops and distributes information security policies, standards and procedures; engages in employee cybersecurity training; implements security controls; assesses security risk and compliance posture; monitors and responds to security events; and executes security testing and assessments. The Company\u2019s Head of Corporate Information Security has extensive knowledge and skills gained from over 25 years of experience in the cybersecurity industry, including serving in leadership positions at other large technology companies and leading the Company\u2019s Information Security team since 2016.\n\nThe Company\u2019s Information Security team coordinates with teams across the Company to prevent, respond to and manage security incidents, and engages third parties, as appropriate, to assess, test or otherwise assist with aspects of its security processes and incident response. A dedicated Supplier Trust team manages information security risks the Company is exposed to through its supplier relationships. The Company has processes to log, track, address, and escalate for further assessment and report, as appropriate, cybersecurity incidents across the Company and its suppliers to senior management and the Audit and Finance Committee (\u201cAudit Committee\u201d) of the Board. The Company\u2019s enterprise risk management program is designed to identify, assess, and monitor the Company\u2019s business risks, including financial, operational, compliance and reputational risks, and reflects management\u2019s assessment of cybersecurity risks.\n\nThe Audit Committee assists the Board in the oversight and monitoring of cybersecurity matters. The Audit Committee regularly reviews and discusses the Company\u2019s cybersecurity risks with management, including the Company\u2019s Head of Corporate Information Security, its General Counsel and the Heads of Compliance and Business Conduct, Business Assurance, and Internal Audit, and receives updates, as necessary, regarding cybersecurity incidents. The Chair of the Audit Committee regularly reports the substance of such reviews and discussions to the Board, as necessary, and recommends to the Board such actions as the Audit Committee deems appropriate.\n\nFor a discussion of the Company\u2019s cybersecurity-related risks, see Item 1A of this Form 10-K under the heading \u201cRisk Factors.\u201d"
+            ]
+        },
+        {
+            "input": "Who is the Chief Financial Officer (CFO) of Apple?",
+            "actual_output": "The Chief Financial Officer (CFO) of Apple is Kevan Parekh.\n",
+            "expected_output": "Kevan Parekh ",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 0.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.00 because the actual output incorrectly identifies Kevan Parekh as the CFO of Apple, when he is actually the Company\u2019s Chief Financial Officer.",
+                    "success": false
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and addresses the input directly!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the first node in the retrieval contexts directly answers the question by stating \"Kevan Parekh\" is \"the Company\u2019s Chief Financial Officer,\" while the subsequent nodes are irrelevant as indicated by \"This document is not relevant to identifying the CFO of Apple.\"",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# Item 9B. Other Information\n\nOn October 31, 2025, the Company announced that Chris Kondo, Senior Director of Corporate Accounting and Principal Accounting Officer, will transition from his role on January 1, 2026. Following the transition, Mr. Kondo will continue to work on other projects. Ben Borders, the Company\u2019s Director of Technical Accounting, will become Senior Director of Corporate Accounting and assume the role of Principal Accounting Officer. Mr. Borders will report to Kevan Parekh, the Company\u2019s Chief Financial Officer."
+            ]
+        },
+        {
+            "input": "Identify the Chief Executive Officer of the Company.",
+            "actual_output": "The Chief Executive Officer is Timothy D. Cook. The Chief Financial Officer is Kevan Parekh.",
+            "expected_output": "Timothy D. Cook ",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 0.5,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.50 because the output contains irrelevant information about the Chief Financial Officer, which detracts from the focus on identifying the Chief Executive Officer.",
+                    "success": false
+                },
+                "Contextual Precision": {
+                    "score": 0.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.00 because all nodes in the retrieval contexts are irrelevant to the input question. The first node 'discusses changes in accounting roles but does not mention the CEO', the second node 'only mentions 'Services' and does not provide information about the CEO', the third node 'is a report from an accounting firm and does not provide information about the CEO', the fourth node 'is an exhibit and does not provide information about the CEO', the fifth node 'only mentions '# Products' and does not provide information about the CEO', the sixth node 'only mentions '# Common Stock' and does not provide information about the CEO', the seventh node 'discusses advertising services and does not provide information about the CEO', and the eighth node 'mentions the '# UNITED STATES SECURITIES AND EXCHANGE COMMISSION' and does not provide information about the CEO' should ideally be ranked lower than any relevant nodes, which are absent here.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# Item 9B. Other Information\n\nOn October 31, 2025, the Company announced that Chris Kondo, Senior Director of Corporate Accounting and Principal Accounting Officer, will transition from his role on January 1, 2026. Following the transition, Mr. Kondo will continue to work on other projects. Ben Borders, the Company\u2019s Director of Technical Accounting, will become Senior Director of Corporate Accounting and assume the role of Principal Accounting Officer. Mr. Borders will report to Kevan Parekh, the Company\u2019s Chief Financial Officer."
+            ]
+        },
+        {
+            "input": "What is the potential maximum fine for a violation of the Digital Markets Act (DMA)?",
+            "actual_output": "The maximum fine for a violation of the Digital Markets Act (DMA) is 10% of annual worldwide net sales.\n",
+            "expected_output": "Up to 10% of annual worldwide net sales ",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.00 because all nodes in the retrieval contexts are irrelevant. The first node discusses 'a change in accounting personnel', the second node only mentions ''Services'', the third node refers to 'an accounting firm report', the fourth node refers to 'an exhibit', the fifth node only mentions '# Products', the sixth node only mentions '# Common Stock', the seventh node discusses 'advertising services', and the eighth node refers to the 'SEC'. All of these are not relevant to the question about DMA fines.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# Item 9B. Other Information\n\nOn October 31, 2025, the Company announced that Chris Kondo, Senior Director of Corporate Accounting and Principal Accounting Officer, will transition from his role on January 1, 2026. Following the transition, Mr. Kondo will continue to work on other projects. Ben Borders, the Company\u2019s Director of Technical Accounting, will become Senior Director of Corporate Accounting and assume the role of Principal Accounting Officer. Mr. Borders will report to Kevan Parekh, the Company\u2019s Chief Financial Officer."
+            ]
+        },
+        {
+            "input": "State the total 'Accounts receivable, net' for 2025.",
+            "actual_output": "I am unable to find the Accounts Receivable, net on the balance sheet. I will now try to locate Item 8 and read the entire Item.\n",
+            "expected_output": "$39,777 Million ",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 0.3333333333333333,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.33 because the response includes descriptions of the AI's process, which are irrelevant to the specific data request, but it does attempt to extract the requested financial information.",
+                    "success": false
+                },
+                "Contextual Precision": {
+                    "score": 0.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.00 because all nodes in the retrieval contexts are irrelevant. The first node 'only indicates the location of financial statements' but 'does not contain the actual value of 'Accounts receivable, net' for 2025', and subsequent nodes similarly 'do not contain the specific value of 'Accounts receivable, net' for 2025' or 'does not contain the actual value of 'Accounts receivable, net' for 2025'.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "Item 8.  Financial Statements and Supplementary Data"
+            ]
+        },
+        {
+            "input": "What was the total liabilities reported for 2025?",
+            "actual_output": "I am unable to locate the total liabilities from the search results. To provide the total liabilities, I need to see the Consolidated Balance Sheets. Could you please specify where to find the Consolidated Balance Sheets in the document?\n",
+            "expected_output": "$285,508 Million ",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response perfectly answers the question with no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.00 because all nodes in the retrieval contexts are irrelevant. The first node 'only contains information about 'Other Current Liabilities' and does not provide the total liabilities for 2025', the second node 'discusses 'Lease-Related Assets and Liabilities' but does not provide the total liabilities for 2025', the third node 'discusses 'Lease liability maturities' but does not provide the total liabilities for 2025', the fourth node 'discusses 'Derivative Instruments' but does not provide the total liabilities for 2025', the fifth node 'discusses 'Unconditional Purchase Obligations' but does not provide the total liabilities for 2025', the sixth node 'discusses 'Liquidity and Capital Resources' but does not provide the total liabilities for 2025', the seventh node 'discusses 'Term Debt' but does not provide the total liabilities for 2025', and the eighth node 'is an index to the consolidated financial statements and does not contain the total liabilities for 2025.' Therefore, there are no relevant nodes ranked higher.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# Other Current Liabilities\n\n|                                    | 2025     | 2024     |\n| ---------------------------------- | -------- | -------- |\n| Income taxes payable               | $ 13,016 | $ 26,601 |\n| Accrued distribution and marketing | $ 8,919  | $ 7,679  |\n| Other current liabilities          | $ 44,452 | $ 44,024 |\n| Total other current liabilities    | $ 66,387 | $ 78,304 |"
+            ]
+        },
+        {
+            "input": "Identify the 'Other non-current liabilities' balance for 2025.",
+            "actual_output": "I am unable to find a single line item for \"Total other non-current liabilities\" in Note 6. However, in the Consolidated Balance Sheets, the \"Total other non-current liabilities\" for 2025 is $41,549 Million.\n",
+            "expected_output": "$41,549 Million ",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 0.5,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.50 because the actual output incorrectly states that Total other non-current liabilities were $41,549 Million in 2025, when the retrieval context states it was $83,727 Million.",
+                    "success": false
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there were no irrelevant statements, indicating a perfectly relevant response! Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.5,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.50 because the first node is irrelevant as 'it discusses \\'Other Current Liabilities\\' but not \\'Other non-current liabilities\\'', while the second node is relevant because 'it contains the term \\'Other non-current liabilities\\''.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# Other Current Liabilities\n\n|                                    | 2025     | 2024     |\n| ---------------------------------- | -------- | -------- |\n| Income taxes payable               | $ 13,016 | $ 26,601 |\n| Accrued distribution and marketing | $ 8,919  | $ 7,679  |\n| Other current liabilities          | $ 44,452 | $ 44,024 |\n| Total other current liabilities    | $ 66,387 | $ 78,304 |"
+            ]
+        },
+        {
+            "input": "What was the quarterly cash dividend per share declared in May 2025?",
+            "actual_output": "The quarterly cash dividend declared in May 2025 was $0.26 per share. The company raised its quarterly dividend from $0.25 to $0.26 per share beginning in May 2025.",
+            "expected_output": "$0.26 per share ",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the first node directly answers the question, stating \"the Company\u2019s quarterly cash dividend was $0.26 per share\" and that the dividend was raised \"from $0.25 to $0.26 per share beginning in May 2025\", while the subsequent nodes are irrelevant as \"This document is not relevant to the question about the dividend per share.\"",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "Capital Return Program\n\nIn addition to its contractual cash requirements, the Company has an authorized share repurchase program. The program does not obligate the Company to acquire a minimum amount of shares. As of September 27, 2025, the Company\u2019s quarterly cash dividend was $0.26 per share. The Company intends to increase its dividend on an annual basis, subject to declaration by the Board.\n\nIn May 2025, the Company announced a new share repurchase program of up to $100 billion and raised its quarterly dividend from $0.25 to $0.26 per share beginning in May 2025. During 2025, the Company repurchased $89.3 billion of its common stock and paid dividends and dividend equivalents of $15.4 billion."
+            ]
+        },
+        {
+            "input": "Identify the specific fine amount for the Commission Article 5(4) investigation.",
+            "actual_output": "The Commission fined the Company \u20ac500 million in the Article 5(4) Investigation. If the Commission makes a final determination in the Article 6(4) Investigation that there has been a violation, it may impose fines up to 10% of the Company\u2019s annual worldwide net sales.\n",
+            "expected_output": "\u20ac500 million ",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 0.5,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.50 because the response contains information about Article 6(4) instead of the requested Article 5(4), making it partially irrelevant.",
+                    "success": false
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.0 because the first node directly answers the question by stating 'On April 23, 2025, the Commission fined the Company \u20ac500 million in the Article 5(4) Investigation', while the subsequent nodes are all irrelevant as they either 'discuss regulatory scrutiny and potential penalties but do not specify the fine amount for the Article 5(4) investigation' or provide other information unrelated to the specific fine amount.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# Digital Markets Act Investigations\n\nOn March 25, 2024, the Commission announced that it had opened a formal noncompliance investigation against the Company under Article 5(4) of the EU DMA (\u201cArticle 5(4) Investigation\u201d). The Article 5(4) Investigation relates to how developers may communicate and promote offers to end users for apps distributed through the App Store, as well as how developers may conclude contracts with those end users. On June 24, 2024, the Commission announced that it had opened an additional formal investigation against the Company regarding whether the Company\u2019s new contractual requirements for third-party app developers and app marketplaces may violate the DMA (\u201cArticle 6(4) Investigation\u201d). On April 23, 2025, the Commission fined the Company \u20ac500 million in the Article 5(4) Investigation and issued a cease and desist order requiring the Company to remove technical and commercial restrictions that prevent developers from steering users to alternative distribution channels outside the App Store. The Company has appealed the Commission\u2019s Article 5(4) decision. Also on April 23, 2025, the Commission issued preliminary findings in the Article 6(4) Investigation. If the Commission makes a final determination in the Article 6(4) Investigation that there has been a violation, it can issue a cease and desist order and may impose fines up to 10% of the Company\u2019s annual worldwide net sales. The Commission may also seek to impose additional fines if it deems that the Company has violated a cease and desist order. The Company believes that it complies with the DMA and has continued to make changes to its compliance plan in response to feedback and engagement with the Commission."
+            ]
+        },
+        {
+            "input": "What was the aggregate market value of stock held by non-affiliates as of March 28, 2025?",
+            "actual_output": "The aggregate market value of the voting and non-voting stock held by non-affiliates of the Registrant, as of March 28, 2025, was approximately $3,253,431,000,000.",
+            "expected_output": "$3,253,431,000,000 ",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response perfectly answers the question with no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because all irrelevant nodes are ranked lower than the relevant node. The first node directly answers the question by stating 'The aggregate market value of the voting and non-voting stock held by non-affiliates of the Registrant, as of March 28, 2025...was approximately $3,253,431,000,000.', while the subsequent nodes are irrelevant, discussing topics such as 'the method for determining the cost of securities sold', 'market risk related to interest and foreign exchange rates', or being generic exhibits.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# The aggregate market value of the voting and non-voting stock held by non-affiliates of the Registrant, as of March 28, 2025, the last business day of the Registrant\u2019s most recently completed second fiscal quarter, was approximately $3,253,431,000,000. Solely for purposes of this disclosure, shares of common stock held by executive officers and directors of the Registrant as of such date have been excluded because such persons may be deemed to be affiliates. This determination of executive officers and directors as affiliates is not necessarily a conclusive determination for any other purposes."
+            ]
+        },
+        {
+            "input": "Identify the total 'Unrecognized compensation cost' related to RSUs as of September 2025.",
+            "actual_output": "I have found the relevant information. As of September 27, 2025, the total unrecognized compensation cost related to outstanding RSUs was $21,800 Million.\nThe total unrecognized compensation cost related to outstanding RSUs as of September 27, 2025, was $21,800 Million.\n",
+            "expected_output": "$21.8 Billion ",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the output perfectly answers the question with no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.5,
+                    "threshold": 0.7,
+                    "reason": "The contextual precision score is 0.50 because the first node is irrelevant, as it 'does not provide the specific dollar amount requested', while the second node directly answers the question. Therefore, an irrelevant node is ranked higher than a relevant node.",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# Share-Based Compensation\n\nThe Company recognizes share-based compensation expense on a straight-line basis for its estimate of equity awards that will ultimately vest."
+            ]
+        }
+    ]
+}

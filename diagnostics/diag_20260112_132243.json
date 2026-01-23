@@ -1,0 +1,126 @@
+{
+    "summary": {
+        "total_tests": 4,
+        "passed": 4,
+        "failed": 0,
+        "timestamp": "2026-01-12 13:22:43.264846"
+    },
+    "detailed_results": [
+        {
+            "input": "How much revenue was generated in Europe in 2025?",
+            "actual_output": "The net sales in Europe for 2025 were $111,032 Million.\n",
+            "expected_output": "$111,032 Million [cite: 657, 1081]",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because all relevant nodes are ranked higher than irrelevant nodes. The first node mentions that 'Europe net sales increased during 2025 compared to 2024', the second node provides a table showing 'net sales by reportable segment for 2025' including Europe with '$ 111,032' million, and the third node provides a table showing 'Net sales' for '2025' including Europe with '$ 111,032'. The fourth node 'does not provide information about Europe', the fifth node 'is not directly relevant to the overall revenue generated in Europe', the sixth node provides information for '2024', the seventh node 'does not provide specific revenue figures for Europe in 2025', and the eighth node 'does not provide specific revenue figures for Europe in 2025'.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# Europe\n\nEurope net sales increased during 2025 compared to 2024 primarily due to higher net sales of Services, iPhone and Mac."
+            ]
+        },
+        {
+            "input": "What were the net sales for the Americas segment in 2025?",
+            "actual_output": "The net sales for the Americas segment in 2025 were $178,353 Million.\n",
+            "expected_output": "$178,353 Million [cite: 657, 1081]",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and addresses the prompt directly.",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.0 because the nodes that do not answer the question about net sales for the Americas segment in 2025, such as the third node which \"provides net sales for different regions, but it does not break down the Americas segment specifically\", the fourth node which provides net sales for 2024, and the fifth node which \"discusses the company's markets and distribution channels, but it does not provide any information about net sales for the Americas segment in 2025\", are ranked lower than the nodes that directly answer the question.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# Segment Operating Performance\n\nThe following table shows net sales by reportable segment for 2025, 2024 and 2023 (dollars in millions):\n\n|                      | 2025      | Change | 2024      | Change | 2023      |\n| -------------------- | --------- | ------ | --------- | ------ | --------- |\n| Americas             | $ 178,353 | 7 %    | $ 167,045 | 3 %    | $ 162,560 |\n| Europe               | $ 111,032 | 10 %   | $ 101,328 | 7 %    | $ 94,294  |\n| Greater China        | $ 64,377  | (4)%   | $ 66,952  | (8)%   | $ 72,559  |\n| Japan                | $ 28,703  | 15 %   | $ 25,052  | 3 %    | $ 24,257  |\n| Rest of Asia Pacific | $ 33,696  | 10 %   | $ 30,658  | 4 %    | $ 29,615  |\n| Total net sales      | $ 416,161 | 6 %    | $ 391,035 | 2 %    | $ 383,285 |"
+            ]
+        },
+        {
+            "input": "What were the net sales in Greater China in 2025?",
+            "actual_output": "The net sales in Greater China in 2025 were $64,377 Million.\n",
+            "expected_output": "$64,377 Million [cite: 657, 1081]",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response perfectly answers the question without irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because all relevant nodes are ranked higher than irrelevant nodes. The first four nodes provide information about Greater China net sales in 2025, while the fifth node, ranked fifth, provides information about Greater China net sales in 2024, which, according to its 'reason', is 'not the requested year'. The sixth, seventh, and eighth nodes, ranked sixth, seventh, and eighth, respectively, do not provide information about Greater China, as their 'reason' states.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# Greater China\n\nGreater China net sales decreased during 2025 compared to 2024 primarily due to lower net sales of iPhone, partially offset by higher net sales of Mac."
+            ]
+        },
+        {
+            "input": "Identify the net sales for Japan in 2025?",
+            "actual_output": "The net sales for Japan in 2025 is $28,703 Million.\n",
+            "expected_output": "$28,703 Million [cite: 657, 1081]",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there were no irrelevant statements.",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because all relevant nodes are ranked higher than irrelevant nodes. The first three nodes are relevant because the first node mentions that \"Japan net sales increased during 2025 compared to 2024\", the second node provides a table showing 'net sales by reportable segment for 2025' including Japan, and the value is '$ 28,703', and the third node provides a table showing 'Net sales' for 2025, including Japan, and the value is '$ 28,703'. The fourth node is irrelevant because it discusses the increase in net sales for 'Rest of Asia Pacific', the fifth node is irrelevant because it provides a table showing 'Net sales' for 2023, the sixth node is irrelevant because it provides net sales for U.S., China, and other countries, and the seventh node is irrelevant because it discusses the increase in net sales for 'Europe'.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# Japan\n\nJapan net sales increased during 2025 compared to 2024 primarily due to higher net sales of iPhone, Services and iPad."
+            ]
+        }
+    ]
+}

@@ -1,0 +1,300 @@
+{
+    "summary": {
+        "total_tests": 10,
+        "passed": 8,
+        "failed": 2,
+        "timestamp": "2026-01-13 11:36:47.617360"
+    },
+    "detailed_results": [
+        {
+            "input": "Identify the total net income for 2025.",
+            "actual_output": "The total net income for 2025 is $112,010 Million.",
+            "expected_output": "$112,010 Million [cite: 793, 890]",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.8666666666666667,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.87 because while the first and second nodes are relevant, the third node, which 'does not contain the net income', should ideally be ranked lower. The fifth node is relevant, but the fourth node, which 'does not contain the net income for 2025', should also be ranked lower. The sixth, seventh, and eighth nodes are also irrelevant as they 'do not contain the net income for 2025'.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# CONSOLIDATED STATEMENTS OF OPERATIONS\n\n(In millions, except number of shares, which are reflected in thousands, and per-share amounts)\n\n|                                          | Years ended                         | September 27, 2025 | September 28, 2024 | September 30, 2023 |\n| ---------------------------------------- | ----------------------------------- | ------------------ | ------------------ | ------------------ |\n| Net sales:                               | Products                            | $307,003           | $294,866           | $298,085           |\n|                                          | Services                            | $109,158           | $96,169            | $85,200            |\n|                                          | Total net sales                     | $416,161           | $391,035           | $383,285           |\n| Cost of sales:                           | Products                            | $194,116           | $185,233           | $189,282           |\n|                                          | Services                            | $26,844            | $25,119            | $24,855            |\n|                                          | Total cost of sales                 | $220,960           | $210,352           | $214,137           |\n|                                          | Gross margin                        | $195,201           | $180,683           | $169,148           |\n| Operating expenses:                      | Research and development            | $34,550            | $31,370            | $29,915            |\n|                                          | Selling, general and administrative | $27,601            | $26,097            | $24,932            |\n|                                          | Total operating expenses            | $62,151            | $57,467            | $54,847            |\n| Operating income                         |                                     | $133,050           | $123,216           | $114,301           |\n| Other income/(expense), net              |                                     | ($321)             | $269               | ($565)             |\n| Income before provision for income taxes |                                     | $132,729           | $123,485           | $113,736           |\n| Provision for income taxes               |                                     | $20,719            | $29,749            | $16,741            |\n| Net income                               |                                     | $112,010           | $93,736            | $96,995            |"
+            ]
+        },
+        {
+            "input": "What was Apple's total net sales for the fiscal year ended September 27, 2025?",
+            "actual_output": "The total net sales for the fiscal year ended September 27, 2025 is $416,161 Million.",
+            "expected_output": "$416,161 Million [cite: 657, 793]",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 0.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.00 because the actual output incorrectly states the total net sales for the fiscal year ended September 27, 2025 as $416,161 Million, when it should be $416,161.",
+                    "success": false
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.8541666666666666,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.85 because the third node, which states \"While this document contains information about operating expenses, it does not directly answer the question about Apple's total net sales,\" should ideally be ranked lower as it is not directly relevant. The fifth node, which states \"This document provides a breakdown of 'Net sales' by region for 2024, which is not relevant to the question about 2025 net sales,\" should also be ranked lower. The remaining irrelevant nodes are ranked lower, contributing to the relatively high score.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# Net Sales\n\n|                 | 2025      | 2024      | 2023      |\n| --------------- | --------- | --------- | --------- |\n| U.S.            | $ 151,790 | $ 142,196 | $ 138,573 |\n| China (1)       | $ 64,377  | $ 66,952  | $ 72,559  |\n| Other countries | $ 199,994 | $ 181,887 | $ 172,153 |\n| Total net sales | $ 416,161 | $ 391,035 | $ 383,285 |"
+            ]
+        },
+        {
+            "input": "What was the percentage increase in total net sales from 2024 to 2025?",
+            "actual_output": "The total net sales increased by 6.43% from 2024 to 2025. The calculation is (416161 - 391035) / 391035 = 0.0642551178283274.\n",
+            "expected_output": "6% [cite: 657, 672]",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and addresses the prompt directly.",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.8333333333333334,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.83 because the third node, which states 'This document provides operating expenses and their percentage of total net sales, which is not directly relevant to calculating the percentage increase in total net sales.', should have been ranked lower. The fourth node, which states 'This document provides a breakdown of net sales by region for 2025, which is not directly relevant to calculating the percentage increase in total net sales from 2024 to 2025.', should have been ranked lower. The fifth node, which states 'This document provides a breakdown of net sales by region for 2024, which is not directly relevant to calculating the percentage increase in total net sales from 2024 to 2025.', should have been ranked lower. The seventh node, which states 'This document provides gross margin information, which is not directly relevant to calculating the percentage increase in total net sales.', should have been ranked lower. The eighth node, which states 'This document discusses business seasonality and product introductions, which is not directly relevant to calculating the percentage increase in total net sales from 2024 to 2025.', should have been ranked lower. However, the first and second nodes are relevant and ranked higher, as they provide information directly related to calculating the percentage increase in total net sales, such as 'Total net sales | $ 416,161 | $ 391,035' and 'Total net sales | $ 416,161 | 6 % | $ 391,035'.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# Net Sales\n\n|                 | 2025      | 2024      | 2023      |\n| --------------- | --------- | --------- | --------- |\n| U.S.            | $ 151,790 | $ 142,196 | $ 138,573 |\n| China (1)       | $ 64,377  | $ 66,952  | $ 72,559  |\n| Other countries | $ 199,994 | $ 181,887 | $ 172,153 |\n| Total net sales | $ 416,161 | $ 391,035 | $ 383,285 |"
+            ]
+        },
+        {
+            "input": "What was the gross margin percentage for 2025?",
+            "actual_output": "The total gross margin percentage for 2025 is 46.9%. The products gross margin percentage for 2025 is 36.8%. The services gross margin percentage for 2025 is 75.4%.",
+            "expected_output": "46.9% [cite: 687]",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because all irrelevant nodes are ranked lower than the relevant node. The first node directly provides the 'Gross margin percentage' for 2025. The second node discusses the increase in 'Services gross margin percentage' but doesn't provide the specific percentage. The third node discusses the increase/decrease in 'Products gross margin percentage' but doesn't provide the specific percentage. The fourth node provides information about 'Operating Expenses'. The fifth node provides a 'CONSOLIDATED STATEMENTS OF OPERATIONS' including 'Gross margin' in millions but not the gross margin percentage. The sixth node provides 'net sales by reportable segment'. The seventh node provides information about 'Earnings Per Share'. The eighth node provides a 'Reconciliation of the Provision for Income Taxes'.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# Gross Margin\n\nProducts and Services gross margin and gross margin percentage for 2025, 2024 and 2023 were as follows (dollars in millions):\n\n|                    | 2025      | 2024      | 2023      |\n| ------------------ | --------- | --------- | --------- |\n| Gross margin:      | $ 112,887 | $ 109,633 | $ 108,803 |\n| Services           | $ 82,314  | $ 71,050  | $ 60,345  |\n| Total gross margin | $ 195,201 | $ 180,683 | $ 169,148 |\n\n|                               | 2025  | 2024  | 2023  |\n| ----------------------------- | ----- | ----- | ----- |\n| Gross margin percentage:      | 36.8% | 37.2% | 36.5% |\n| Services                      | 75.4% | 73.9% | 70.8% |\n| Total gross margin percentage | 46.9% | 46.2% | 44.1% |"
+            ]
+        },
+        {
+            "input": "What was the basic earnings per share in 2025?",
+            "actual_output": "The basic earnings per share for 2025 is $7.49.",
+            "expected_output": "$7.49 [cite: 793, 890]",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.8333333333333333,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.83 because the second node, which states 'This document contains information about shares used in computing earnings per share, but it does not directly provide the basic earnings per share value. Therefore, it is not directly useful.', should ideally be ranked lower since it doesn't directly answer the question. The nodes ranked 4th, 5th, 6th, 7th, and 8th also do not directly provide the basic earnings per share value, as they state 'it does not directly provide the basic earnings per share value. Therefore, it is not directly useful.' However, the first and third nodes are relevant as they 'directly provides the answer'.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# Note 3 \u2013 Earnings Per Share\n\nThe following table shows the computation of basic and diluted earnings per share for 2025, 2024 and 2023 (net income in millions and shares in thousands):\n\n|              | 2025                                      | 2024       | 2023       |          |            |\n| ------------ | ----------------------------------------- | ---------- | ---------- | -------- | ---------- |\n| Numerator:   | Net income                                | $ 112,010  | $ 93,736   | $ 96,995 |            |\n| Denominator: | Weighted-average basic shares outstanding | 14,948,500 | 15,343,783 |          | 15,744,231 |\n|              | Effect of dilutive share-based awards     | 56,197     | 64,312     |          | 68,316     |\n|              | Weighted-average diluted shares           | 15,004,697 | 15,408,095 |          | 15,812,547 |\n\nBasic earnings per share: $ 7.49, $ 6.11, $ 6.16\n\nDiluted earnings per share: $ 7.46, $ 6.08, $ 6.13\n\nApproximately 24 million restricted stock units (\u201cRSUs\u201d) were excluded from the computation of diluted earnings per share for 2023 because their effect would have been antidilutive."
+            ]
+        },
+        {
+            "input": "What was the diluted earnings per share in 2025?",
+            "actual_output": "The diluted earnings per share for 2025 is $7.46.",
+            "expected_output": "$7.46 [cite: 793, 890]",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because all nodes that do not directly provide the diluted earnings per share, such as the third node which 'provides the number of diluted shares, which is related to the calculation of diluted earnings per share, but does not directly answer the question', are ranked lower than the nodes that do.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# Note 3 \u2013 Earnings Per Share\n\nThe following table shows the computation of basic and diluted earnings per share for 2025, 2024 and 2023 (net income in millions and shares in thousands):\n\n|              | 2025                                      | 2024       | 2023       |          |            |\n| ------------ | ----------------------------------------- | ---------- | ---------- | -------- | ---------- |\n| Numerator:   | Net income                                | $ 112,010  | $ 93,736   | $ 96,995 |            |\n| Denominator: | Weighted-average basic shares outstanding | 14,948,500 | 15,343,783 |          | 15,744,231 |\n|              | Effect of dilutive share-based awards     | 56,197     | 64,312     |          | 68,316     |\n|              | Weighted-average diluted shares           | 15,004,697 | 15,408,095 |          | 15,812,547 |\n\nBasic earnings per share: $ 7.49, $ 6.11, $ 6.16\n\nDiluted earnings per share: $ 7.46, $ 6.08, $ 6.13\n\nApproximately 24 million restricted stock units (\u201cRSUs\u201d) were excluded from the computation of diluted earnings per share for 2023 because their effect would have been antidilutive."
+            ]
+        },
+        {
+            "input": "Identify the total cost of sales for 2025.",
+            "actual_output": "The total cost of sales for 2025 is $220,960 Million, as shown in the Consolidated Statements of Operations.",
+            "expected_output": "$220,960 Million [cite: 793]",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.0 because all nodes that do not directly provide the cost of sales figure for 2025, such as the second node which 'doesn't directly provide the cost of sales figure', are ranked lower than the first node which contains the 'Total cost of sales' for 'September 27, 2025'.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# CONSOLIDATED STATEMENTS OF OPERATIONS\n\n(In millions, except number of shares, which are reflected in thousands, and per-share amounts)\n\n|                                          | Years ended                         | September 27, 2025 | September 28, 2024 | September 30, 2023 |\n| ---------------------------------------- | ----------------------------------- | ------------------ | ------------------ | ------------------ |\n| Net sales:                               | Products                            | $307,003           | $294,866           | $298,085           |\n|                                          | Services                            | $109,158           | $96,169            | $85,200            |\n|                                          | Total net sales                     | $416,161           | $391,035           | $383,285           |\n| Cost of sales:                           | Products                            | $194,116           | $185,233           | $189,282           |\n|                                          | Services                            | $26,844            | $25,119            | $24,855            |\n|                                          | Total cost of sales                 | $220,960           | $210,352           | $214,137           |\n|                                          | Gross margin                        | $195,201           | $180,683           | $169,148           |\n| Operating expenses:                      | Research and development            | $34,550            | $31,370            | $29,915            |\n|                                          | Selling, general and administrative | $27,601            | $26,097            | $24,932            |\n|                                          | Total operating expenses            | $62,151            | $57,467            | $54,847            |\n| Operating income                         |                                     | $133,050           | $123,216           | $114,301           |\n| Other income/(expense), net              |                                     | ($321)             | $269               | ($565)             |\n| Income before provision for income taxes |                                     | $132,729           | $123,485           | $113,736           |\n| Provision for income taxes               |                                     | $20,719            | $29,749            | $16,741            |\n| Net income                               |                                     | $112,010           | $93,736            | $96,995            |"
+            ]
+        },
+        {
+            "input": "How much was the operating income for 2025?",
+            "actual_output": "The Operating Income for 2025 is $133,050 Million.\n",
+            "expected_output": "$133,050 Million [cite: 793, 1081]",
+            "success": false,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and addresses the prompt directly!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 0.5,
+                    "threshold": 0.7,
+                    "reason": "The score is 0.50 because the first node is irrelevant as 'This document provides a breakdown of operating activities but does not directly state the operating income for 2025. It includes net income and adjustments to reconcile it to cash generated by operating activities.' This should be ranked lower than the second node, which 'contains the exact answer'. The third node is also irrelevant because 'This document provides a breakdown of operating expenses but does not directly state the operating income for 2025.'",
+                    "success": false
+                }
+            },
+            "retrieval_context_preview": [
+                "# Operating activities:\n\n| Net income                                                                     |   | $112,010  | $93,736   | $96,995  |\n| ------------------------------------------------------------------------------ | - | --------- | --------- | -------- |\n| Adjustments to reconcile net income to cash generated by operating activities: |   |           |           |          |\n| Depreciation and amortization                                                  |   | $11,698   | $11,445   | $11,519  |\n| Share-based compensation expense                                               |   | $12,863   | $11,688   | $10,833  |\n| Other                                                                          |   | ($89)     | ($2,266)  | ($2,227) |\n| Changes in operating assets and liabilities:                                   |   |           |           |          |\n| Accounts receivable, net                                                       |   | ($6,682)  | ($3,788)  | ($1,688) |\n| Vendor non-trade receivables                                                   |   | ($347)    | ($1,356)  | $1,271   |\n| Inventories                                                                    |   | $1,400    | ($1,046)  | ($1,618) |\n| Other current and non-current assets                                           |   | ($9,197)  | ($11,731) | ($5,684) |\n| Accounts payable                                                               |   | $902      | $6,020    | ($1,889) |\n| Other current and non-current liabilities                                      |   | ($11,076) | $15,552   | $3,031   |\n| Cash generated by operating activities                                         |   | $111,482  | $118,254  | $110,543 |"
+            ]
+        },
+        {
+            "input": "State the income before provision for income taxes in 2025.",
+            "actual_output": "The income before provision for income taxes for 2025 is $132,729 Million.",
+            "expected_output": "$132,729 Million [cite: 793]",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response perfectly answers the question with no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the first node contains the exact information needed to answer the question, as it includes a table with 'Income before provision for income taxes' for the year 'September 27, 2025'. The subsequent nodes are correctly ranked lower, as they are about irrelevant topics such as 'Other Current Liabilities', 'Operating activities', 'Financing activities', 'Earnings per share', 'Investing activities', 'Cash, cash equivalents, and restricted cash and cash equivalents', and 'Income Taxes'.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# CONSOLIDATED STATEMENTS OF OPERATIONS\n\n(In millions, except number of shares, which are reflected in thousands, and per-share amounts)\n\n|                                          | Years ended                         | September 27, 2025 | September 28, 2024 | September 30, 2023 |\n| ---------------------------------------- | ----------------------------------- | ------------------ | ------------------ | ------------------ |\n| Net sales:                               | Products                            | $307,003           | $294,866           | $298,085           |\n|                                          | Services                            | $109,158           | $96,169            | $85,200            |\n|                                          | Total net sales                     | $416,161           | $391,035           | $383,285           |\n| Cost of sales:                           | Products                            | $194,116           | $185,233           | $189,282           |\n|                                          | Services                            | $26,844            | $25,119            | $24,855            |\n|                                          | Total cost of sales                 | $220,960           | $210,352           | $214,137           |\n|                                          | Gross margin                        | $195,201           | $180,683           | $169,148           |\n| Operating expenses:                      | Research and development            | $34,550            | $31,370            | $29,915            |\n|                                          | Selling, general and administrative | $27,601            | $26,097            | $24,932            |\n|                                          | Total operating expenses            | $62,151            | $57,467            | $54,847            |\n| Operating income                         |                                     | $133,050           | $123,216           | $114,301           |\n| Other income/(expense), net              |                                     | ($321)             | $269               | ($565)             |\n| Income before provision for income taxes |                                     | $132,729           | $123,485           | $113,736           |\n| Provision for income taxes               |                                     | $20,719            | $29,749            | $16,741            |\n| Net income                               |                                     | $112,010           | $93,736            | $96,995            |"
+            ]
+        },
+        {
+            "input": "What was the total provision for income taxes in 2025?",
+            "actual_output": "The total provision for income taxes for 2025 is $20,719 Million, as found in Note 7.",
+            "expected_output": "$20,719 Million [cite: 793, 967]",
+            "success": true,
+            "metrics": {
+                "Faithfulness": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context! Great job!",
+                    "success": true
+                },
+                "Answer Relevancy": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant information. Great job!",
+                    "success": true
+                },
+                "Contextual Precision": {
+                    "score": 1.0,
+                    "threshold": 0.7,
+                    "reason": "The score is 1.00 because the relevant node was ranked first, while the subsequent nodes were correctly identified as irrelevant, as they either mentioned 'Note 7 \u2013 Income Taxes' without figures, discussed 'ASU 2023-09' without providing the value, provided information about 'operating activities and net income', discussed 'Income taxes payable', or focused on 'financing activities', 'investing activities', and 'cash, cash equivalents, and restricted cash' without mentioning the provision for income taxes.",
+                    "success": true
+                }
+            },
+            "retrieval_context_preview": [
+                "# Reconciliation of the Provision for Income Taxes\n\nA reconciliation of the provision for income taxes to the amount computed by applying the statutory federal income tax rate (21% in 2025, 2024 and 2023) to income before provision for income taxes for 2025, 2024 and 2023 is as follows (dollars in millions):\n\n|                                      | 2025     | 2024     | 2023     |\n| ------------------------------------ | -------- | -------- | -------- |\n| Computed expected tax                | $ 27,873 | $ 25,932 | $ 23,885 |\n| Earnings of foreign subsidiaries     | (8,120)  | (5,311)  | (5,744)  |\n| Change in valuation allowance        | 2,091    | \u2014        | \u2014        |\n| Research and development credit, net | (1,049)  | (1,397)  | (1,212)  |\n| Impact of the State Aid Decision     | (486)    | 10,246   | \u2014        |\n| Other                                | 410      | 279      | (188)    |\n| Provision for income taxes           | $ 20,719 | $ 29,749 | $ 16,741 |\n| Effective tax rate                   | 15.6%    | 24.1%    | 14.7%    |"
+            ]
+        }
+    ]
+}
